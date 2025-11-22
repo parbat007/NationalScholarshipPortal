@@ -1,0 +1,122 @@
+﻿@model ScholarshipPortal.Models.ScholarshipApplicationViewModel
+@{
+    ViewData["Title"] = "Scholarship Application";
+    // Get the current step from the URL, default to 1
+    int currentStep = int.Parse(Context.Request.Query["step"].FirstOrDefault() ?? "1");
+    int totalSteps = 3;
+
+    // Calculate progress for the progress bar
+    double progress = (double)currentStep / totalSteps * 100;
+
+    // Get the Scheme Name passed when clicking the Apply button
+    string schemeName = Context.Request.Query["schemeName"].FirstOrDefault() ?? "Selected Scheme";
+}
+
+<div class="w-full pt-12 pb-24 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Application Header -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-extrabold text-gray-900 mb-2">SCHOLARSHIP APPLICATION FORM</h1>
+            <p class="text-lg text-gray-600">Applying for: <span class="font-semibold text-nsp-blue">@schemeName</span></p>
+        </div>
+
+        <!-- Multi-Step Progress Bar -->
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Step @currentStep of @totalSteps</h2>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-nsp-blue h-2.5 rounded-full transition-all duration-500" style="width: @progress%"></div>
+            </div>
+
+            <!-- Step Indicators -->
+            <div class="flex justify-between text-xs text-gray-600 mt-2 font-medium">
+                <span class="@(currentStep == 1 ? "text-nsp-blue font-bold" : "")">1. Basic Details</span>
+                <span class="@(currentStep == 2 ? "text-nsp-blue font-bold" : "")">2. Contact & Fee</span>
+                <span class="@(currentStep == 3 ? "text-nsp-blue font-bold" : "")">3. Documents</span>
+            </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="bg-white p-8 md:p-10 rounded-xl shadow-2xl border border-gray-100">
+
+            <!-- Success/Error Message Display -->
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative mb-6" role="alert">
+                    <span class="block sm:inline">@TempData["SuccessMessage"]</span>
+                </div>
+            }
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg relative mb-6" role="alert">
+                    <span class="block sm:inline">@TempData["ErrorMessage"]</span>
+                </div>
+            }
+
+            <!-- Form Start: All steps post back to the same Apply action with the current step number -->
+            <form asp-controller="Home" asp-action="Apply" method="post" class="space-y-8">
+
+                <!-- Hidden inputs to maintain state across pages -->
+                <input type="hidden" name="step" value="@currentStep" /> <!-- **FIXED: Changed name from CurrentStep to step** -->
+                <input type="hidden" name="UserId" value="@Model.UserId" />
+                <input type="hidden" name="SchemeName" value="@schemeName" />
+
+                <!-- RENDER THE CURRENT STEP PARTIAL -->
+                @if (currentStep == 1)
+                {
+                    @await Html.PartialAsync("_ApplicationStep1", Model)
+                }
+                else if (currentStep == 2)
+                {
+                    @await Html.PartialAsync("_ApplicationStep2", Model)
+                }
+                else if (currentStep == 3)
+                {
+                    @await Html.PartialAsync("_ApplicationStep3", Model)
+                }
+
+                <!-- NAVIGATION BUTTONS -->
+                <div class="pt-6 border-t mt-8 flex justify-between">
+
+                    <!-- Previous Button (POST) -->
+                    @if (currentStep > 1)
+                    {
+                        <button type="submit" name="action" value="Back"
+                                class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-6 rounded-lg transition duration-150 shadow-sm flex items-center">
+                            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+                            Previous
+                        </button>
+                    }
+                    else
+                    {
+                        <span></span>
+                    }
+
+                    <!-- Next / Submit Button -->
+                    @if (currentStep < totalSteps)
+                    {
+                        <button type="submit" name="action" value="Next"
+                                class="bg-nsp-blue hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-150 shadow-lg flex items-center">
+                            Next Step
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                        </button>
+                    }
+                    else
+                    {
+                        <button type="submit" name="action" value="Submit"
+                                class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition duration-150 shadow-lg flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 mr-2"></i>
+                            Final Submit Application
+                        </button>
+                    }
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Required script section for client-side validation -->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

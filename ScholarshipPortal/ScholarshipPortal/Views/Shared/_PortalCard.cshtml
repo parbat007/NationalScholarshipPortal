@@ -1,0 +1,66 @@
+﻿@model ScholarshipPortal.Models.PortalCardViewModel
+
+@{
+    // FIX: Define variables inside the main code block
+    // Determine the base actions for Students portal only.
+    string loginAction = Model.Title == "Students" ? "Login" : "Index";
+    string registerAction = Model.Title == "Students" ? "Register" : "Index";
+
+    // Static Icon/Title Color Classes (Determines card's theme)
+    string iconColorClass = Model.Color switch
+    {
+        "blue" => "text-blue-600 bg-blue-50",
+        "orange" => "text-orange-600 bg-orange-50",
+        "green" => "text-green-600 bg-green-50",
+        "red" => "text-red-600 bg-red-50",
+        _ => "text-gray-600 bg-gray-50"
+    };
+
+    string titleColorClass = Model.Color switch
+    {
+        "blue" => "text-nsp-blue",
+        "orange" => "text-nsp-orange",
+        "green" => "text-green-800",
+        "red" => "text-red-800",
+        _ => "text-gray-800"
+    };
+
+    // Hover Background/Ring Classes (Creates the colored glow effect on hover)
+    string hoverBgClass = Model.Color switch
+    {
+        "blue" => "hover:bg-blue-50 hover:ring-blue-500",
+        "orange" => "hover:bg-orange-50 hover:ring-orange-500",
+        "green" => "hover:bg-green-50 hover:ring-green-500",
+        "red" => "hover:bg-red-50 hover:ring-red-500",
+        _ => "hover:bg-gray-50 hover:ring-gray-500"
+    };
+
+    // Uniform Login Button Class (Always NSP Blue)
+    const string uniformLoginClass = "bg-nsp-blue hover:bg-blue-700";
+
+    // Uniform Register Button Hover Class (Always Green hover)
+    const string uniformRegisterHoverClass = "hover:bg-green-100 hover:text-green-700";
+}
+
+<div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition duration-300 ring-1 ring-transparent @hoverBgClass hover:shadow-xl cursor-pointer">
+    <!-- Icon Container: Uses the combined color and background class -->
+    <div class="mb-4 w-12 h-12 rounded-lg flex items-center justify-center @iconColorClass">
+        <i data-lucide="@Model.Icon" class="w-6 h-6"></i>
+    </div>
+
+    <!-- Title: Uses the specific color for the role -->
+    <h3 class="text-xl font-semibold @titleColorClass mb-2">@Model.Title</h3>
+    <p class="text-sm text-gray-500 mb-6 min-h-[40px]">@Model.Description</p>
+
+    <!-- Actions: Login/Register buttons -->
+    <div class="flex space-x-3">
+        <!-- Login Button -->
+        <a asp-controller="Home" asp-action="@loginAction" class="flex-1 @uniformLoginClass text-white text-sm font-medium py-2 rounded-lg transition duration-150 text-center">
+            Login
+        </a>
+        <!-- Register Button -->
+        <a asp-controller="Home" asp-action="@registerAction" class="flex-1 border border-gray-300 text-gray-700 text-sm font-medium py-2 rounded-lg @uniformRegisterHoverClass transition duration-150 text-center">
+            Register
+        </a>
+    </div>
+</div>

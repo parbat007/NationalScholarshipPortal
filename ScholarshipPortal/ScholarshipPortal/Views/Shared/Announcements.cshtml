@@ -1,0 +1,274 @@
+﻿@model List<ScholarshipPortal.Models.AnnouncementViewModel>
+@{
+    ViewData["Title"] = "Announcements";
+    int counter = 0; // Counter for alternating layout
+}
+
+<style>
+    /* Custom CSS for the gentle bell pulse animation */
+    @@keyframes bell-pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 4px 6px rgba(26, 115, 232, 0.2);
+        }
+
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(26, 115, 232, 0.4);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 4px 6px rgba(26, 115, 232, 0.2);
+        }
+    }
+
+    .animate-bell-pulse-slow {
+        animation: bell-pulse 3s infinite ease-in-out;
+    }
+
+    /* --- SCROLL TRIGGER ANIMATIONS --- */
+    @@keyframes slide-left {
+        0% {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @@keyframes slide-right {
+        0% {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @@keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Base state (Hidden and positioned) */
+    .animated-item {
+        opacity: 0;
+    }
+
+        /* Animation state (Triggered by JS adding the 'animate' class) */
+        .animated-item.animate-left {
+            animation: slide-left 0.6s ease-out forwards;
+        }
+
+        .animated-item.animate-right {
+            animation: slide-right 0.6s ease-out forwards;
+        }
+
+        .animated-item.animate-fade {
+            animation: fade-in-up 0.6s ease-out forwards;
+        }
+
+    /* Staggered delays */
+    .delay-1 {
+        animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+        animation-delay: 0.2s;
+    }
+
+    .delay-3 {
+        animation-delay: 0.3s;
+    }
+
+    .delay-4 {
+        animation-delay: 0.4s;
+    }
+
+    .delay-5 {
+        animation-delay: 0.5s;
+    }
+
+    .delay-6 {
+        animation-delay: 0.6s;
+    }
+
+    .delay-7 {
+        animation-delay: 0.7s;
+    }
+
+    .delay-8 {
+        animation-delay: 0.8s;
+    }
+
+</style>
+
+<!-- Enhanced Header Section with Soft Gradient -->
+<div class="w-full pt-16 pb-12 bg-gray-50 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
+
+        <!-- Combined Icon and Title (Horizontal Layout) -->
+        <div class="flex items-center justify-center space-x-4 mb-2">
+
+            <!-- Icon: APPLIED PULSE ANIMATION -->
+            <div class="p-3 rounded-full bg-nsp-blue shadow-lg shadow-nsp-blue/30 transform transition duration-300 hover:scale-[1.05] animate-bell-pulse-slow">
+                <i data-lucide="bell" class="w-7 h-7 text-white"></i>
+            </div>
+
+            <!-- Title: Now inline with the icon -->
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+                Announcements
+            </h1>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="text-xl text-gray-600">
+            Stay updated with the latest news, deadlines, and important notifications.
+        </p>
+    </div>
+
+    <!-- Announcements List with Alternating Timeline Layout -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative">
+
+        <!-- Central Timeline Line (Hidden on mobile) -->
+        <div class="hidden lg:block absolute top-0 bottom-64 left-1/2 w-0.5 bg-gray-300 z-0 transform -translate-x-1/2"></div>
+
+        @foreach (var announcement in Model.OrderByDescending(a => a.Date))
+        {
+            bool isLeft = counter % 2 == 0;
+            counter++;
+
+            // --- Styling based on Announcement Type ---
+            string tagColorClass = announcement.Type switch
+            {
+                "New" => "bg-green-600 text-green-100",
+                "Urgent" => "bg-red-600 text-red-100",
+                "Info" => "bg-orange-600 text-orange-100",
+                _ => "bg-gray-600 text-gray-100"
+            };
+
+            string announcementBorderClass = announcement.Type switch
+            {
+                "New" => "border-l-4 border-green-500",
+                "Urgent" => "border-l-4 border-red-500",
+                "Info" => "border-l-4 border-orange-500",
+                _ => "border-l-4 border-gray-500"
+            };
+
+            string timelineDotClass = announcement.Type switch
+            {
+                "New" => "bg-green-500 ring-green-200",
+                "Urgent" => "bg-red-500 ring-red-200",
+                "Info" => "bg-orange-500 ring-orange-200",
+                _ => "bg-gray-500 ring-gray-200"
+            };
+
+            // Calculate grid class for alternating position
+            string gridPositionClass = isLeft ? "lg:col-start-1 lg:pr-12" : "lg:col-start-2 lg:pl-12";
+
+            // Determine slide animation based on position
+            string slideClass = isLeft ? "animate-left" : "animate-right";
+
+            // Stagger delay based on the loop counter
+            int delay = (counter % 8) + 3; // Ensure delay cycles 3-8
+
+            // Apply animation and stagger delay
+            string delayClass = $"delay-{delay}";
+
+            <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-8 z-10">
+
+                <!-- Announcement Card -->
+                <div class="@gridPositionClass">
+                    <div class="animated-item @slideClass @delayClass bg-white rounded-xl shadow-xl border border-gray-100 transition duration-300 hover:shadow-2xl @announcementBorderClass overflow-hidden p-6 text-left">
+
+                        <!-- Tag and Date -->
+                        <div class="mb-3 flex justify-start items-center space-x-3 text-sm font-medium text-gray-500">
+                            <span class="px-3 py-1 text-xs font-bold rounded-full @tagColorClass uppercase tracking-wider">
+                                @announcement.Type
+                            </span>
+                            <span class="flex items-center">
+                                <i data-lucide="calendar" class="w-4 h-4 mr-1 text-gray-400"></i>
+                                @announcement.Date.ToString("MMMM d, yyyy")
+                            </span>
+                        </div>
+
+                        <!-- Title and Description -->
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-2">@announcement.Title</h3>
+                        <p class="text-gray-700">@announcement.Description</p>
+
+                        <!-- Call to Action (Example for Urgent) -->
+                        @if (announcement.Type == "Urgent")
+                        {
+                            <a href="#" class="mt-4 inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 transition">
+                                <i data-lucide="alert-triangle" class="w-4 h-4 mr-1"></i>
+                                Apply Now Before Deadline
+                            </a>
+                        }
+                    </div>
+                </div>
+
+                <!-- Timeline Dot (Visual separator/indicator) -->
+                <div class="hidden lg:flex absolute top-0 @(isLeft ? "left-1/2 -ml-3" : "left-1/2 -ml-3") h-full items-start justify-center z-10">
+                    <div class="w-6 h-6 rounded-full @timelineDotClass ring-4 ring-opacity-50 mt-10"></div>
+                </div>
+            </div>
+        }
+
+        <!-- Stay Informed Block (Centered at the end) -->
+        <div class="max-w-xl mx-auto pt-8 z-20 relative animated-item animate-fade delay-8">
+            <div class="bg-blue-50 p-6 rounded-xl border border-blue-200 flex items-start space-x-4">
+                <i data-lucide="info" class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                <div>
+                    <h4 class="text-base font-semibold text-blue-800">Stay Informed</h4>
+                    <p class="text-sm text-blue-700">Make sure to check this page regularly for important updates. You can also enable email notifications in your account settings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Required script section for scroll observation -->
+@section Scripts {
+    <script>
+        // --- Intersection Observer Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -150px 0px', // Trigger higher up the viewport
+                threshold: 0.1
+            };
+
+            // Select all animated items once
+            const animatedItems = document.querySelectorAll('.animated-item');
+
+            const visualObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // When item enters viewport, add 'animate' class to start the animation
+                        // The class list modification ensures the animation plays correctly
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, observerOptions);
+
+            animatedItems.forEach(item => {
+                visualObserver.observe(item);
+            });
+        });
+    </script>
+}

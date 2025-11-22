@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - National Scholarship Portal</title>
+
+    <!-- Import Tailwind CSS CDN for modern utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nsp-blue': '#1a73e8', // Custom blue
+                        'nsp-orange': '#ff9900', // Custom orange
+                        'nsp-dark-blue': '#1c5ba6', // Dark Navy color from Hero BG
+                        'nsp-darker-blue': '#103f7a', // A slightly darker shade for contrast
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Load Inter font (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Load Lucide Icons CDN for the clean vector icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .hero-gradient {
+           
+            background:
+            /* 1. Intense Orange/Yellow Glow (Top Right) */
+            radial-gradient(at 100% 0%, rgba(255, 120, 0, 0.9) 0%, transparent 65%),
+            /* 2. Blue Glow (Bottom Left) */
+            radial-gradient(at 0% 100%, #1a73e8 0%, transparent 60%);
+            background-color: #1c5ba6;
+            position: relative;
+            overflow: hidden;
+        }
+
+            /* Pseudo-element to create the white fade-out effect at the bottom */
+            .hero-gradient::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 150px;
+                background: linear-gradient(to top, #f9fafb 0%, rgba(249, 250, 251, 0) 100%);
+                z-index: 5;
+            }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+
+    
+    <header class="sticky top-0 z-50 bg-blue-50 shadow-md border-b-2 border-nsp-blue/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <a href="/" class="flex items-center space-x-2">
+                <div class="p-2 rounded-lg bg-nsp-blue/10">
+                    <i data-lucide="graduation-cap" class="w-6 h-6 text-nsp-blue"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-lg text-gray-900">National Scholarship Portal</span>
+                    <p class="text-xs text-gray-500">Government of India</p> 
+                </div>
+            </a>
+
+            <!-- Navigation Links: Text is dark on light background -->
+            <nav class="hidden md:flex space-x-6 text-base font-semibold">
+                <a asp-controller="Home" asp-action="Index" class="text-gray-900 hover:text-nsp-blue transition duration-150">Home</a>
+                <a asp-controller="Home" asp-action="Announcements" class="text-gray-900 hover:text-nsp-blue transition duration-150">Announcements</a>
+                <a href="/#faq" class="text-gray-900 hover:text-nsp-blue transition duration-150">FAQ</a>
+                <a asp-controller="Home" asp-action="ContactUs" class="text-gray-900 hover:text-nsp-blue transition duration-150">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+    <footer class="bg-nsp-dark-blue shadow-2xl mt-12" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                   
+                    <div class="p-2 rounded-lg">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div>
+                       
+                        <span class="font-bold text-lg text-white">National Scholarship Portal</span>
+                        <p class="text-xs text-gray-300">Academic Year 2025-2026</p>
+                    </div>
+                </div>
+                
+                <p class="text-sm text-gray-300 max-w-xs">
+                    Empowering students nationwide with accessible scholarship opportunities and fostering educational excellence.
+                </p>
+                <div class="flex space-x-3">
+                 
+                    <a href="#" class="text-gray-300 hover:text-white transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="text-base font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li><a asp-controller="Home" asp-action="Index" class="hover:text-white transition">Home</a></li>
+                    <li><a asp-controller="Home" asp-action="Announcements" class="hover:text-white transition">Announcements</a></li>
+                    <li><a href="/Home#scholarships" class="hover:text-white transition">Scholarships</a></li>
+                    <li><a href="/Home#faq" class="hover:text-white transition">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Us -->
+            <div>
+                <h4 class="text-base font-semibold text-white mb-4">Contact Us</h4>
+                <div class="space-y-3 text-sm text-gray-300">
+                    <p class="flex items-start space-x-2">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5"></i>
+                        <span>Ministry of Education, Shastri Bhawan, New Delhi - 110001</span>
+                    </p>
+                    <p class="flex items-center space-x-2">
+                        <i data-lucide="phone" class="w-5 h-5 text-gray-400 flex-shrink-0"></i>
+                        <span>1800-555-0100 (Toll Free)</span>
+                    </p>
+                    <p class="flex items-center space-x-2">
+                        <i data-lucide="mail" class="w-5 h-5 text-gray-400 flex-shrink-0"></i>
+                        <a href="mailto:support@nsp.gov.in" class="hover:text-white transition">support@nsp.gov.in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Bar: DARKER BACKGROUND SHADE, MUTED TEXT -->
+        <div class="bg-nsp-darker-blue border-t border-nsp-dark-blue/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-xs text-gray-400">
+                &copy; 2025 National Scholarship Portal. All rights reserved. | Designed for educational empowerment
+            </div>
+        </div>
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Script to render Lucide icons dynamically and handle the FAQ accordion -->
+    <script>
+        lucide.createIcons();
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('.accordion-icon');
+
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== header) {
+                            const otherContent = otherHeader.nextElementSibling;
+                            const otherIcon = otherHeader.querySelector('.accordion-icon');
+                            if (otherContent.classList.contains('active')) {
+                                otherContent.classList.remove('active');
+                                otherContent.style.maxHeight = null;
+                                otherIcon.setAttribute('d', 'M6 9l6 6 6-6');
+                            }
+                        }
+                    });
+
+                    if (content.classList.contains('active')) {
+                        content.classList.remove('active');
+                        content.style.maxHeight = null;
+                        icon.setAttribute('d', 'M6 9l6 6 6-6');
+                    } else {
+                        content.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.setAttribute('d', 'M18 15l-6-6-6 6');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

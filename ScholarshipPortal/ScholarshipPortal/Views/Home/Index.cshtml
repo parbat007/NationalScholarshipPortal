@@ -1,0 +1,377 @@
+﻿@model List<ScholarshipPortal.Models.PortalCardViewModel>
+@{
+    ViewData["Title"] = "National Scholarship Portal";
+}
+
+<style>
+    @@keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes slide-left {
+        0% {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+        /* Start far left */
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @@keyframes slide-right {
+        0% {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+        /* Start far right */
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .animate-fade-up {
+        animation: fade-in-up 0.6s ease-out forwards paused;
+        opacity: 0;
+    }
+
+    .animate-slide-left {
+        animation: slide-left 0.6s ease-out forwards paused;
+        opacity: 0;
+    }
+
+    .animate-slide-right {
+        animation: slide-right 0.6s ease-out forwards paused;
+        opacity: 0;
+    }
+
+    
+    .delay-1 {
+        animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+        animation-delay: 0.2s;
+    }
+
+    .delay-3 {
+        animation-delay: 0.3s;
+    }
+
+    .delay-4 {
+        animation-delay: 0.4s;
+    }
+
+    .delay-5 {
+        animation-delay: 0.5s;
+    }
+
+    .delay-6 {
+        animation-delay: 0.6s;
+    }
+
+    .delay-7 {
+        animation-delay: 0.7s;
+    }
+
+    .delay-8 {
+        animation-delay: 0.8s;
+    }
+
+    .animated-item {
+        opacity: 0;
+    }
+</style>
+
+<div class="w-full">
+
+    <!-- 1. Hero Section (IMMEDIATE Animation) -->
+    <section class="hero-gradient py-24 md:py-32 text-center text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <!-- Academic Year Badge -->
+            <div class="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 text-sm font-medium border border-white/30 shadow-md animate-fade-up delay-1" style="animation-play-state: running;">
+                <i data-lucide="graduation-cap" class="w-4 h-4 mr-2"></i>
+                Academic Year 2025-2026
+            </div>
+
+            <!-- Title and Subtitle -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight animate-fade-up delay-2" style="animation-play-state: running;">
+                National Scholarship Portal
+            </h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto mb-8 animate-fade-up delay-3" style="animation-play-state: running;">
+                Empowering students across the nation with accessible scholarship opportunities. Your pathway to educational excellence starts here.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex justify-center space-x-4 animate-fade-up delay-4" style="animation-play-state: running;">
+                <!-- CHANGE: Changed <button> to <a> and added href="#scholarships" -->
+                <a href="#scholarships" class="bg-nsp-orange hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-[1.02] shadow-xl">
+                    Explore Scholarships
+                </a>
+                <a href="#faq" class="bg-white/10 border border-white/30 text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/20 transition duration-300">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Choose Your Portal Section - SCROLL TRIGGERED (FADE UP) -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12" data-animate-section="true">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2 animated-item animate-fade-up delay-1">
+                Choose Your Portal
+            </h2>
+            <p class="text-lg text-gray-600 animated-item animate-fade-up delay-2">
+                Select your role to access the dedicated portal with tailored features and services
+            </p>
+        </div>
+
+        <!-- Portal Cards: Staggered Slide UP (h-full ensures equal height) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            <div class="animated-item animate-fade-up delay-3 h-full">
+                @await Html.PartialAsync("_PortalCard", new PortalCardViewModel { Icon = "user", Title = "Students", Description = "Apply for scholarships and track your applications", Color = "blue" })
+            </div>
+            <div class="animated-item animate-fade-up delay-4 h-full">
+                @await Html.PartialAsync("_PortalCard", new PortalCardViewModel { Icon = "book-open-text", Title = "Institute", Description = "Manage student applications and verifications", Color = "orange" })
+            </div>
+            <div class="animated-item animate-fade-up delay-5 h-full">
+                @await Html.PartialAsync("_PortalCard", new PortalCardViewModel { Icon = "shield-check", Title = "State Officer", Description = "Monitor and approve state-level applications", Color = "green" })
+            </div>
+            <div class="animated-item animate-fade-up delay-6 h-full">
+                @await Html.PartialAsync("_PortalCard", new PortalCardViewModel { Icon = "landmark", Title = "Ministry", Description = "Oversee national scholarship programs", Color = "red" })
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Statistics Section (Dynamic Counting) - SCROLL TRIGGERED FADE UP -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="stats-section" data-animate-section="true">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-4 animated-item animate-fade-up delay-1">
+                <p class="stat-counter text-4xl font-extrabold text-nsp-blue" data-target="150" data-suffix="+">0</p>
+                <p class="text-sm text-gray-500 mt-1">Active Schemes</p>
+            </div>
+            <div class="p-4 animated-item animate-fade-up delay-2">
+                <p class="stat-counter text-4xl font-extrabold text-nsp-blue" data-target="500000" data-suffix="L+" data-divisor="100000" data-start="450000">0</p>
+                <p class="text-sm text-gray-500 mt-1">Students Benefited</p>
+            </div>
+            <div class="p-4 animated-item animate-fade-up delay-3">
+                <p class="stat-counter text-4xl font-extrabold text-nsp-blue" data-target="500" data-suffix="Cr+" data-prefix="₹" data-start="450">₹0</p>
+                <p class="text-sm text-gray-500 mt-1">Amount Disbursed</p>
+            </div>
+            <div class="p-4 animated-item animate-fade-up delay-4">
+                <p class="stat-counter text-4xl font-extrabold text-nsp-blue" data-target="2000" data-suffix="+">0</p>
+                <p class="text-sm text-gray-500 mt-1">Partner Institutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Scholarship Programs Section - SLIDE LEFT/RIGHT ALTERNATING -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 bg-gray-50" data-animate-section="true" id="scholarships">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2 animated-item animate-fade-up delay-1">
+                Scholarship Programs
+            </h2>
+            <p class="text-lg text-gray-600 animated-item animate-fade-up delay-2">
+                Explore our diverse range of scholarship opportunities designed to support your educational journey
+            </p>
+        </div>
+
+        <!-- Program Cards: Alternate Slide-In Direction -->
+        <!-- FIX 1: Enforced items-stretch on the grid row itself -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            <!-- FIX 2: Added h-full to the wrapper div to ensure the partial fills the height -->
+            <div class="animated-item animate-slide-left delay-3 h-full">
+                @await Html.PartialAsync("_ProgramCard", new ProgramCardViewModel {
+                Icon = "graduation-cap",
+                                Title = "Post Matric Scholarship",
+                                Description = "For students from backward categories pursuing technical, undergraduate, or postgraduate courses.",
+                                Amount = "Varies by Scheme",
+                                Color = "blue" })
+            </div>
+            <div class="animated-item animate-slide-right delay-4 h-full">
+                @await Html.PartialAsync("_ProgramCard", new ProgramCardViewModel {
+                                Icon = "users",
+                                Title = "Scholarship Meant for Girls (PRAGATI)",
+                                Description = "A scheme focused on promoting education for 'One Girl' per family in AICTE-approved technical institutions.",
+                                Amount = "Up to ₹30,000",
+                                Color = "orange" })
+            </div>
+            <div class="animated-item animate-slide-left delay-5 h-full">
+                @await Html.PartialAsync("_ProgramCard", new ProgramCardViewModel {
+                                Icon = "award",
+                                Title = "Merit Based Scholarship (NTSE)",
+                                Description = "National Talent Search Examination scholarship for highly meritorious students.",
+                                Amount = "Varies by Class",
+                                Color = "green" })
+            </div>
+            <div class="animated-item animate-slide-right delay-6 h-full">
+                @await Html.PartialAsync("_ProgramCard", new ProgramCardViewModel {
+                                Icon = "trending-up",
+                                Title = "Central Scholarship Scheme",
+                                Description = "General scheme for providing financial assistance to students of higher learning.",
+                                Amount = "Varies by Course",
+                                Color = "red" })
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ Section (Updated content) - SCROLL TRIGGERED FADE UP -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16" data-animate-section="true" id="faq">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2 animated-item animate-fade-up delay-1">
+                Frequently Asked Questions
+            </h2>
+            <p class="text-lg text-gray-600 animated-item animate-fade-up delay-2">
+                Find answers to common questions about our scholarship programs
+            </p>
+        </div>
+
+        <!-- Accordion/FAQ List -->
+        <div class="space-y-4">
+            <div class="animated-item animate-fade-up delay-3">
+                @await Html.PartialAsync("_FAQItem", new FAQItemViewModel {
+                                Question = "What is the main objective of the National Scholarship Portal?",
+                                Answer = "The objective of the portal is to support students of higher learning with scholarships to assist them in affording the basic needs during their studies. It aims to address the rising cost of education and ensure students can connect directly to various government schemes." })
+            </div>
+            <div class="animated-item animate-fade-up delay-4">
+                @await Html.PartialAsync("_FAQItem", new FAQItemViewModel {
+                                Question = "Who is eligible for Post Matric Scholarship?",
+                                Answer = "This scheme is primarily for applicants belonging to economically backward castes/categories (SC/ST/OBC/Minorities). Criteria often include completing Class 10th and 12th with a minimum aggregate (e.g., 60%), and family income limits apply." })
+            </div>
+            <div class="animated-item animate-fade-up delay-5">
+                @await Html.PartialAsync("_FAQItem", new FAQItemViewModel {
+                                Question = "What are the eligibility criteria for the PRAGATI Scholarship?",
+                                Answer = "The PRAGATI Scholarship is meant for girls. Eligibility requires 'One Girl' per family (extendable to two) where the family income is less than Rs. 8 Lakh per annum. Selection is merit-based for AICTE-approved Technical Degree/Diploma courses." })
+            </div>
+            <div class="animated-item animate-fade-up delay-6">
+                @await Html.PartialAsync("_FAQItem", new FAQItemViewModel {
+                                Question = "How does the portal help students find suitable scholarships?",
+                                Answer = "Finding and applying for a suitable scholarship can be a tedious task. Our portal allows students to browse through all available schemes, check various criteria as per the scholarships, and connect directly to the government system to apply and track their status." })
+            </div>
+            <div class="animated-item animate-fade-up delay-7">
+                @await Html.PartialAsync("_FAQItem", new FAQItemViewModel {
+                                Question = "What schemes are currently available through the portal?",
+                                Answer = "The portal covers various schemes including Post Matric Scholarship, National Merit Scholarship (like NTSE), and Central Scholarship Scheme, among others." })
+            </div>
+            <div class="animated-item animate-fade-up delay-8">
+                @await Html.PartialAsync("_FAQItem", new FAQItemViewModel {
+                                Question = "What is the eligibility for the NTSE (National Talent Search Examination) Scholarship?",
+                                Answer = "Candidates must be an Indian national, studying in a recognized school, and typically require a minimum of 60% marks in Class IX (55% for SC, ST, and PH candidates)." })
+            </div>
+        </div>
+    </section>
+
+</div>
+
+@section Scripts {
+    <script>
+        // Function to handle the counting animation (Restored for completeness)
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const suffix = element.getAttribute('data-suffix') || '';
+            const prefix = element.getAttribute('data-prefix') || '';
+            const divisor = parseInt(element.getAttribute('data-divisor')) || 1;
+
+            const startRaw = element.getAttribute('data-start');
+            const start = startRaw ? parseInt(startRaw) : 0;
+
+            // FIX: Animation duration reduced to 0.6 seconds (600ms) for snappier effect
+            const duration = 600;
+            const range = target - start;
+            const startTimestamp = performance.now();
+
+            function updateCount(timestamp) {
+                const elapsed = timestamp - startTimestamp;
+                const progress = Math.min(elapsed / duration, 1);
+                let currentValue = start + Math.floor(progress * range);
+
+                let formattedValue;
+                if (divisor > 1) {
+                    formattedValue = (currentValue / divisor).toLocaleString('en-IN', { maximumFractionDigits: 1 });
+                } else {
+                    formattedValue = currentValue.toLocaleString('en-IN');
+                }
+
+                element.textContent = prefix + formattedValue + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
+                } else {
+                    formattedValue = (target / divisor).toLocaleString('en-IN', { maximumFractionDigits: 1, minimumFractionDigits: (divisor > 1) ? 0 : 0 });
+                    element.textContent = prefix + formattedValue + suffix;
+                }
+            }
+
+            let initialFormattedValue = (start / divisor).toLocaleString('en-IN', { maximumFractionDigits: 1 });
+            element.textContent = prefix + initialFormattedValue + suffix;
+
+            requestAnimationFrame(updateCount);
+        }
+
+
+        // --- Intersection Observer Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.stat-counter');
+            const statsSection = document.getElementById('stats-section');
+            let hasAnimated = false;
+
+            // 1. Observer for Statistics Section (Runs counter animation and item fade-up)
+            if (statsSection) {
+                const statsObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !hasAnimated) {
+                            counters.forEach(animateCounter);
+                            hasAnimated = true;
+                            // Trigger fade-up animation for stats items as well
+                            entry.target.querySelectorAll('.animated-item').forEach(el => {
+                                el.style.animationPlayState = 'running';
+                            });
+                            observer.unobserve(statsSection);
+                        }
+                    });
+                }, {
+                    threshold: 0.5
+                });
+                statsObserver.observe(statsSection);
+            }
+
+            // 2. Observer for Visual Slide-In Sections (Triggers CSS animations)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -100px 0px', // Trigger slightly before the section enters
+                threshold: 0.1
+            };
+
+            // Select all sections marked for animation (Section 2, 4, 5)
+            const sectionsToAnimate = document.querySelectorAll('[data-animate-section="true"]');
+
+            const visualObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Activate all nested animated items in the section
+                        entry.target.querySelectorAll('.animated-item').forEach(el => {
+                            el.style.animationPlayState = 'running';
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            sectionsToAnimate.forEach(section => {
+                visualObserver.observe(section);
+            });
+
+        });
+    </script>
+}

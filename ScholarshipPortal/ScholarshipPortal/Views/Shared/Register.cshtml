@@ -1,0 +1,263 @@
+﻿@using System.Text.Json;
+@model ScholarshipPortal.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Student Registration";
+    // Access the StateDistrictViewModel passed from the controller
+    var stateDistrictData = ViewData["StateDistrictData"] as ScholarshipPortal.Models.StateDistrictViewModel;
+}
+
+<style>
+    /* CSS Animation for Slide-In Effect */
+    @@keyframes slide-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(100px); /* Start 100px below the final position */
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* Final position */
+        }
+    }
+
+    .animate-slide-up {
+        animation: slide-in-up 0.7s ease-out forwards; /* 0.7s duration, stays at the end (forwards) */
+        opacity: 0; 
+    }
+</style>
+
+<!-- Main Container: Centered Layout using the STATIC Hero Gradient Background -->
+<div class="hero-gradient pt-12 pb-24 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- Header Text Area (MUST BE WHITE/LIGHT GRAY FOR CONTRAST) -->
+        <div class="text-center mb-10 text-white">
+            <!-- Icon -->
+            <div class="inline-flex items-center justify-center p-4 rounded-full bg-white/20 mb-4 shadow-lg">
+                <i data-lucide="user-plus" class="w-8 h-8 text-white"></i>
+            </div>
+            <h1 class="text-4xl font-extrabold mb-2">New Student Registration</h1>
+            <p class="text-lg text-gray-200">Securely create your account for the National Scholarship Portal.</p>
+        </div>
+
+        <!-- FORM CARD: APPLY THE ANIMATION CLASS HERE -->
+        <div class="bg-white p-8 md:p-10 rounded-xl shadow-2xl border border-gray-100 animate-slide-up">
+            <!-- Validation Summary -->
+            <div asp-validation-summary="ModelOnly" class="text-red-500 font-medium text-sm mb-4"></div>
+
+            <form asp-controller="Home" asp-action="Register" method="post" class="space-y-8">
+
+                <!-- Section 1: Personal Details -->
+                <section class="space-y-6">
+                    <h2 class="text-xl font-semibold text-nsp-blue border-b-2 border-nsp-blue/20 pb-2">Personal Details</h2>
+
+                    <!-- Row 1: Domicile & District -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label asp-for="StateOfDomicile" class="block text-sm font-medium text-gray-700">STATE OF DOMICILE <span class="text-red-500">*</span></label>
+                            <select asp-for="StateOfDomicile" id="StateOfDomicile" onchange="filterDistricts()" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition">
+                                <option value="">Select State</option>
+                                @if (stateDistrictData?.States != null)
+                                {
+                                    foreach (var state in stateDistrictData.States)
+                                    {
+                                        <option value="@state.Name" selected="@(Model.StateOfDomicile == state.Name)">@state.Name</option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="StateOfDomicile" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                        <div>
+                            <label asp-for="District" class="block text-sm font-medium text-gray-700">DISTRICT <span class="text-red-500">*</span></label>
+                            <select asp-for="District" id="District" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition">
+                                <option value="">Select District </option>
+                            </select>
+                            <span asp-validation-for="District" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Name & DOB -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label asp-for="Name" class="block text-sm font-medium text-gray-700">NAME (AS IN MARKS SHEETS) <span class="text-red-500">*</span></label>
+                            <input asp-for="Name" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            <span asp-validation-for="Name" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                        <div>
+                            <label asp-for="DOB" class="block text-sm font-medium text-gray-700">DOB <span class="text-red-500">*</span></label>
+                            <div class="relative mt-1">
+                                <input asp-for="DOB" type="date" class="block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            </div>
+                            <span asp-validation-for="DOB" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Gender, Mobile & Email -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <label asp-for="Gender" class="block text-sm font-medium text-gray-700">GENDER <span class="text-red-500">*</span></label>
+                            <select asp-for="Gender" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition">
+                                <option value="">Select Gender </option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="Gender" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                        <div>
+                            <label asp-for="MobileNumber" class="block text-sm font-medium text-gray-700">MOBILE NUMBER <span class="text-red-500">*</span></label>
+                            <input asp-for="MobileNumber" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            <span asp-validation-for="MobileNumber" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Email" class="block text-sm font-medium text-gray-700">EMAIL ID <span class="text-red-500">*</span></label>
+                            <input asp-for="Email" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            <span asp-validation-for="Email" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Institute & Identity -->
+                <section class="space-y-6 pt-4">
+                    <h2 class="text-xl font-semibold text-nsp-blue border-b-2 border-nsp-blue/20 pb-2">Institute & Identity</h2>
+
+                    <!-- Row 5: Institute Code & Aadhaar -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label asp-for="InstituteCode" class="block text-sm font-medium text-gray-700">INSTITUTE CODE <span class="text-red-500">*</span></label>
+                            <input asp-for="InstituteCode" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            <span asp-validation-for="InstituteCode" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                        <div>
+                            <label asp-for="AadhaarNumber" class="block text-sm font-medium text-gray-700">AADHAR NUMBER <span class="text-red-500">*</span></label>
+                            <input asp-for="AadhaarNumber" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            <span asp-validation-for="AadhaarNumber" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Bank Details -->
+                <section class="space-y-6 pt-4">
+                    <h2 class="text-xl font-semibold text-nsp-blue border-b-2 border-nsp-blue/20 pb-2">Bank Details</h2>
+
+                    <!-- Row 6: IFSC & Account Number -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label asp-for="BankIfscCode" class="block text-sm font-medium text-gray-700">BANK IFSC CODE <span class="text-red-500">*</span></label>
+                            <input asp-for="BankIfscCode" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            <span asp-validation-for="BankIfscCode" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                        <div>
+                            <label asp-for="BankAccountNumber" class="block text-sm font-medium text-gray-700">BANK ACCOUNT NUMBER <span class="text-red-500">*</span></label>
+                            <input asp-for="BankAccountNumber" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            <span asp-validation-for="BankAccountNumber" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                    </div>
+
+                    <!-- Row 7: Bank Name -->
+                    <div>
+                        <label asp-for="BankName" class="block text-sm font-medium text-gray-700">BANK NAME <span class="text-red-500">*</span></label>
+                        <input asp-for="BankName" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                        <span asp-validation-for="BankName" class="text-xs text-red-500 mt-1 block"></span>
+                    </div>
+                </section>
+
+                <!-- Section 4: Security -->
+                <section class="space-y-6 pt-4">
+                    <h2 class="text-xl font-semibold text-nsp-blue border-b-2 border-nsp-blue/20 pb-2">Security & Declaration</h2>
+
+                    <!-- Row 8: Passwords -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label asp-for="Password" class="block text-sm font-medium text-gray-700">SET YOUR PASSWORD <span class="text-red-500">*</span></label>
+                            <input asp-for="Password" type="password" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            <span asp-validation-for="Password" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                        <div>
+                            <label asp-for="ConfirmPassword" class="block text-sm font-medium text-gray-700">CONFIRM PASSWORD <span class="text-red-500">*</span></label>
+                            <input asp-for="ConfirmPassword" type="password" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" />
+                            <span asp-validation-for="ConfirmPassword" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                    </div>
+
+                    <!-- Row 9: Declaration -->
+                    <div class="flex items-start pt-4">
+                        <div class="flex items-center h-5">
+                            <input asp-for="DeclarationAccepted" type="checkbox" class="focus:ring-nsp-blue h-4 w-4 text-nsp-blue border-gray-300 rounded" />
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label asp-for="DeclarationAccepted" class="font-medium text-gray-700">
+                                ALL THE ABOVE INFORMATION FURNISHED BY ME IS TRUE TO THE BEST OF MY KNOWLEDGE.
+                            </label>
+                            <span asp-validation-for="DeclarationAccepted" class="text-xs text-red-500 mt-1 block"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Submit Button -->
+                <div class="pt-6 flex justify-center">
+                    <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center px-12 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg text-white bg-nsp-blue hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-nsp-blue transition duration-150">
+                        Register
+                    </button>
+                </div>
+            </form>
+
+            <!-- Link to Login -->
+            <div class="text-center text-sm text-gray-600 mt-8">
+                Already have an account? <a asp-controller="Home" asp-action="Login" class="text-nsp-blue hover:text-blue-700 font-semibold transition">Log in Here</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        // Data structure matching the C# StateDistrictViewModel used by the controller
+        // IMPORTANT FIX: Access the inner 'States' list reliably using bracket notation
+        const StateData = @Html.Raw(JsonSerializer.Serialize(ViewData["StateDistrictData"]));
+
+        // FIX: Look for states list in the object. Prioritize PascalCase 'States' or fallback to camelCase 'states'
+        const statesList = StateData.States || StateData.states;
+
+        function filterDistricts() {
+            const stateSelect = document.getElementById('StateOfDomicile');
+            const districtSelect = document.getElementById('District');
+            const selectedStateName = stateSelect.value;
+
+            // This is the value stored in the model if validation failed.
+            const originalDistrictValue = '@(Model.District)';
+
+            // Clear previous options
+            districtSelect.innerHTML = '<option value="">-- Dropdown button --</option>';
+
+            if (selectedStateName && statesList && Array.isArray(statesList)) {
+                // Safely find the state data by name. Use defensive property access for Name (PascalCase) and name (camelCase)
+                const state = statesList.find(s => s.Name === selectedStateName || s.name === selectedStateName);
+
+                if (state) {
+                    // FIX: Use defensive property access for districts (PascalCase) and districts (camelCase)
+                    const districts = state.Districts || state.districts;
+
+                    if (districts && Array.isArray(districts)) {
+                        districts.forEach(district => {
+                            const option = document.createElement('option');
+                            option.value = district;
+                            option.textContent = district;
+
+                            // Select the option if it matches the value stored in the model (after validation failure)
+                            if (district === originalDistrictValue) {
+                                option.selected = true;
+                            }
+                            districtSelect.appendChild(option);
+                        });
+                    }
+                }
+            }
+        }
+
+        filterDistricts();
+        document.getElementById('StateOfDomicile').addEventListener('change', filterDistricts);
+    </script>
+}

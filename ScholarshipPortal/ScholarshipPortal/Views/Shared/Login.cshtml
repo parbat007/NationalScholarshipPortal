@@ -1,0 +1,96 @@
+﻿@model ScholarshipPortal.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Student Login";
+}
+
+<style>
+    /* CSS Animation for Slide-In Effect (Form comes from down to up) */
+    @@keyframes slide-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(100px); /* Start 100px below the final position */
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* Final position */
+        }
+    }
+
+    .animate-slide-up {
+        animation: slide-in-up 0.7s ease-out forwards; /* 0.7s duration, stays at the end (forwards) */
+        opacity: 0; /* Start invisible */
+    }
+</style>
+
+<!-- Main Container: Centered Layout using the STATIC Hero Gradient Background -->
+<div class="hero-gradient min-h-screen flex items-center justify-center py-8">
+    <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- Text container is white/light gray to ensure readability against the dark gradient -->
+        <div class="text-center mb-6 text-white">
+
+            <!-- Icon and Title on the same line -->
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <!-- Icon: Use a white background for the circle accent -->
+                <div class="inline-flex items-center justify-center p-3 rounded-full bg-white/20 shadow-lg">
+                    <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                </div>
+
+                <!-- Title: White text on dark gradient -->
+                <h1 class="text-3xl font-extrabold leading-none">Login to your portal</h1>
+            </div>
+
+            <p class="text-md text-gray-200">Enter your credentials to access your scholarship applications.</p>
+        </div>
+
+        <!-- Login Card (Remains White) - APPLYING SLIDE-UP ANIMATION -->
+        <div class="bg-white p-8 rounded-xl shadow-2xl border border-gray-100 animate-slide-up">
+            <form asp-controller="Home" asp-action="Login" method="post" class="space-y-5">
+
+                <!-- Validation Summary (shows failed login message) -->
+                @if (!ViewContext.ModelState.IsValid && ViewContext.ModelState.ContainsKey(string.Empty))
+                {
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <span class="block sm:inline">@Html.ValidationMessage(string.Empty)</span>
+                    </div>
+                }
+
+                <!-- Username (Mobile/Email) -->
+                <div>
+                    <label asp-for="Username" class="block text-sm font-medium text-gray-700">Mobile Number / Email ID *</label>
+                    <input asp-for="Username" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" placeholder="Enter your registered mobile or email" />
+                    <span asp-validation-for="Username" class="text-xs text-red-500 mt-1 block"></span>
+                </div>
+
+                <!-- Password -->
+                <div>
+                    <label asp-for="Password" class="block text-sm font-medium text-gray-700">Password *</label>
+                    <input asp-for="Password" type="password" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-nsp-blue focus:border-nsp-blue transition" placeholder="Enter Password" />
+                    <span asp-validation-for="Password" class="text-xs text-red-500 mt-1 block"></span>
+                </div>
+
+                <!-- Forgot Password Link -->
+                <div class="text-right text-sm">
+                    <a asp-controller="Home" asp-action="ForgotPassword" class="text-gray-500 hover:text-nsp-blue transition duration-150">Forgot Password?</a>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-2">
+                    <button type="submit" class="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg text-white bg-nsp-blue hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-nsp-blue transition duration-150">
+                        Login
+                    </button>
+                </div>
+
+                <!-- Link to Register -->
+                <div class="text-center text-sm text-gray-600 mt-4 pt-4 border-t border-gray-100">
+                    Don't have an account? <a asp-controller="Home" asp-action="Register" class="text-nsp-blue hover:text-blue-700 font-semibold transition">Register Here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,99 @@
+﻿@model ScholarshipPortal.Models.DashboardViewModel
+@{
+    ViewData["Title"] = "Student Dashboard";
+    // Determine which section is currently active (default to Dashboard)
+    var activeSection = ViewData["ActiveSection"] as string ?? "dashboard";
+    
+    // Read the messages into local variables before they are consumed by the view
+    var successMessage = TempData["SuccessMessage"];
+    var errorMessage = TempData["ErrorMessage"];
+}
+
+<div class="bg-gray-50 pt-8 pb-16 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- SUCCESS MESSAGE BANNER -->
+        @if (successMessage != null)
+        {
+            <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-lg mb-8 shadow-md" role="alert">
+                <p class="font-bold">Application Submitted!</p>
+                <p class="text-sm">@successMessage</p>
+            </div>
+
+            TempData.Remove("SuccessMessage");
+        }
+        @if (errorMessage != null)
+        {
+            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg mb-8 shadow-md" role="alert">
+                <p class="font-bold">Error!</p>
+                <p class="text-sm">@errorMessage</p>
+            </div>
+
+            TempData.Remove("ErrorMessage");
+        }
+
+        <!-- Welcome Header: Clean and Professional -->
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 mb-8 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-gray-900">
+                Welcome, @Model.UserProfile.Name!
+            </h1>
+            <a asp-controller="Home" asp-action="Logout" class="flex items-center text-red-600 hover:text-red-800 font-semibold transition">
+                <i data-lucide="log-out" class="w-5 h-5 mr-1"></i>
+                Logout
+            </a>
+        </div>
+        
+        <!-- Main Content Grid (Sidebar + Body) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Column 1: Sidebar Navigation -->
+            <aside class="lg:col-span-3">
+                <div class="bg-white p-6 rounded-xl shadow-lg space-y-2">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Navigation</h2>
+                    
+                    <!-- Dashboard Overview Link -->
+                    <a asp-action="Dashboard" asp-route-activeSection="dashboard" class="dashboard-link @(activeSection == "dashboard" ? "bg-nsp-blue text-white" : "text-gray-700 hover:bg-gray-100") flex items-center p-3 rounded-lg font-medium transition">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i>
+                        Dashboard Overview
+                    </a>
+                    
+                    <!-- My Profile Link -->
+                    <a asp-action="Dashboard" asp-route-activeSection="profile" class="dashboard-link @(activeSection == "profile" ? "bg-nsp-blue text-white" : "text-gray-700 hover:bg-gray-100") flex items-center p-3 rounded-lg font-medium transition">
+                        <i data-lucide="user" class="w-5 h-5 mr-3"></i>
+                        My Profile
+                    </a>
+
+                    <!-- Check Application Status Link -->
+                    <a asp-action="Dashboard" asp-route-activeSection="status" class="dashboard-link @(activeSection == "status" ? "bg-nsp-blue text-white" : "text-gray-700 hover:bg-gray-100") flex items-center p-3 rounded-lg font-medium transition">
+                        <i data-lucide="check-square" class="w-5 h-5 mr-3"></i>
+                        Check Application Status
+                    </a>
+                    
+                    <!-- Logout button duplicated for quick access -->
+                    <a asp-action="Logout" class="flex items-center p-3 rounded-lg font-medium transition text-red-600 hover:bg-red-50">
+                        <i data-lucide="log-out" class="w-5 h-5 mr-3"></i>
+                        Logout
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Column 2: Main Content Area (Renders the selected partial view) -->
+            <section class="lg:col-span-9">
+                
+                @if (activeSection == "dashboard")
+                {
+                    @await Html.PartialAsync("_DashboardOverview", Model)
+                }
+                else if (activeSection == "profile")
+                {
+                    @await Html.PartialAsync("_MyProfile", Model.UserProfile)
+                }
+                else if (activeSection == "status")
+                {
+                    @await Html.PartialAsync("_ApplicationStatus", Model.ApplicationStatuses)
+                }
+
+            </section>
+        </div>
+    </div>
+</div>

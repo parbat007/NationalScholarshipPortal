@@ -1,0 +1,54 @@
+﻿@model ScholarshipPortal.Models.DashboardViewModel
+
+<!-- 1. Application Summary Cards - Enhanced Visuals -->
+<h2 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-3">Application Summary</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+
+    <!-- Total Applied -->
+    <div class="bg-white p-6 rounded-xl shadow-lg border border-nsp-blue/20 transition duration-300 hover:shadow-xl text-center">
+        <h3 class="text-4xl font-extrabold text-nsp-blue">@Model.Summary.TotalApplied</h3>
+        <p class="text-sm text-gray-600 mt-2">Total Applied</p>
+    </div>
+
+    <!-- Approved -->
+    <div class="bg-white p-6 rounded-xl shadow-lg border border-green-200 transition duration-300 hover:shadow-xl text-center">
+        <h3 class="text-4xl font-extrabold text-green-600">@Model.Summary.Approved</h3>
+        <p class="text-sm text-gray-600 mt-2">Approved</p>
+    </div>
+
+    <!-- Pending -->
+    <div class="bg-white p-6 rounded-xl shadow-lg border border-yellow-200 transition duration-300 hover:shadow-xl text-center">
+        <h3 class="text-4xl font-extrabold text-yellow-600">@Model.Summary.Pending</h3>
+        <p class="text-sm text-gray-600 mt-2">Pending</p>
+    </div>
+
+    <!-- Rejected -->
+    <div class="bg-white p-6 rounded-xl shadow-lg border border-red-200 transition duration-300 hover:shadow-xl text-center">
+        <h3 class="text-4xl font-extrabold text-red-600">@Model.Summary.Rejected</h3>
+        <p class="text-sm text-gray-600 mt-2">Rejected</p>
+    </div>
+</div>
+
+<!-- 2. Available Schemes - Polished Listing -->
+<h2 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-3">Available Schemes</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    @foreach (var scheme in Model.AvailableSchemes)
+    {
+        <!-- Scheme Card with clearer structure and spacing -->
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex items-start justify-left space-x-4 transition duration-300 hover:shadow-xl">
+            <div class="flex-grow">
+                <h3 class="text-lg font-semibold text-gray-800">@scheme.Title</h3>
+                <p class="text-sm text-gray-500 mt-1">@scheme.Description</p>
+                <p class="text-xs text-gray-400 mt-1">Amount: @scheme.Amount</p>
+            </div>
+
+            <!-- Apply Button -->
+           <!-- button class="bg-nsp-blue hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition duration-150 flex-shrink-0 text-sm shadow-md">-->
+
+            <a asp-controller="Home" asp-action="Apply" asp-route-step="1" asp-route-schemeName="@scheme.Title" class="bg-nsp-blue hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition duration-150 flex-shrink-0 text-sm shadow-md">
+                Apply
+            </a>
+       
+        </div>
+    }
+</div>

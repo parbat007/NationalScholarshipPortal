@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ScholarshipPortal
+build_property.RootNamespace = ScholarshipPortal
+build_property.ProjectDir = C:\Users\DU997HF\OneDrive - EY\Desktop\Train\First\SP\ScholarshipPortal\ScholarshipPortal\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\DU997HF\OneDrive - EY\Desktop\Train\First\SP\ScholarshipPortal\ScholarshipPortal
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Home/Apply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcHBseS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Home/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Home/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/Announcements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFubm91bmNlbWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/RegistrationSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJlZ2lzdHJhdGlvblN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_ApplicationStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BcHBsaWNhdGlvblN0YXR1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_ApplicationStep1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BcHBsaWNhdGlvblN0ZXAxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_ApplicationStep2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BcHBsaWNhdGlvblN0ZXAyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_ApplicationStep3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BcHBsaWNhdGlvblN0ZXAzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_ContactInfoBlock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db250YWN0SW5mb0Jsb2NrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_DashboardOverview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EYXNoYm9hcmRPdmVydmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_FAQItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GQVFJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_MyProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeVByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_PortalCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qb3J0YWxDYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_ProgramCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9ncmFtQ2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DU997HF/OneDrive - EY/Desktop/Train/First/SP/ScholarshipPortal/ScholarshipPortal/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-yq4rjjvbqx

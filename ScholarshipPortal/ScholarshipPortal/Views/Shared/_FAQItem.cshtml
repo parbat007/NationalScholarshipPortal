@@ -1,0 +1,27 @@
+﻿@model ScholarshipPortal.Models.FAQItemViewModel
+
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+    <!-- Header -->
+    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition duration-150">
+        @Model.Question
+        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 flex-shrink-0 transition-transform duration-300"></i>
+    </button>
+
+    <!-- Content (Hidden by default, controlled by JavaScript in _Layout.cshtml) -->
+    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+        <p class="p-5 pt-0 text-sm text-gray-600 border-t border-gray-100">
+            @Model.Answer
+        </p>
+    </div>
+</div>
+
+<style>
+    /* Required for the smooth accordion transition */
+    .accordion-content {
+        transition: max-height 0.5s ease-in-out;
+    }
+
+        .accordion-content.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+</style>

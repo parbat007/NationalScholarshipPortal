@@ -1,0 +1,145 @@
+﻿@model ScholarshipPortal.Models.ScholarshipApplicationViewModel
+
+<h2 class="text-xl font-semibold text-nsp-blue mb-4 border-b pb-2">Step 1: Basic & Academic Details</h2>
+
+<div class="space-y-6">
+    <!-- BASIC DETAILS -->
+    <h3 class="text-lg font-bold text-gray-800 border-l-4 border-nsp-blue pl-2">BASIC DETAILS</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <label asp-for="AadhaarNumber" class="block text-sm font-medium text-gray-700">AADHAR NUMBER *</label>
+            <input asp-for="AadhaarNumber" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+            <span asp-validation-for="AadhaarNumber" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="Religion" class="block text-sm font-medium text-gray-700">RELIGION *</label>
+            <select asp-for="Religion" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3">
+                <option value="">Select</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Muslim">Muslim</option>
+                <option value="Christian">Christian</option>
+                <option value="Sikh">Sikh</option>
+            </select>
+            <span asp-validation-for="Religion" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="CommunityCategory" class="block text-sm font-medium text-gray-700">COMMUNITY/CATEGORY *</label>
+            <select asp-for="CommunityCategory" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3">
+                <option value="">Select</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+                <option value="OBC">OBC</option>
+                <option value="General">General</option>
+            </select>
+            <span asp-validation-for="CommunityCategory" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="FatherName" class="block text-sm font-medium text-gray-700">FATHER NAME *</label>
+            <input asp-for="FatherName" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+            <span asp-validation-for="FatherName" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="MotherName" class="block text-sm font-medium text-gray-700">MOTHER NAME</label>
+            <input asp-for="MotherName" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+            <span asp-validation-for="MotherName" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="FamilyAnnualIncome" class="block text-sm font-medium text-gray-700">FAMILY ANNUAL INCOME *</label>
+            <input asp-for="FamilyAnnualIncome" type="number" step="1000" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+            <span asp-validation-for="FamilyAnnualIncome" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+    </div>
+
+    <!-- ACADEMIC DETAILS -->
+    <h3 class="text-lg font-bold text-gray-800 border-l-4 border-nsp-blue pl-2 pt-6">ACADEMIC DETAILS</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+            <label asp-for="InstituteName" class="block text-sm font-medium text-gray-700">INSTITUTE NAME *</label>
+            <input asp-for="InstituteName" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" placeholder="Dropdown button" />
+            <span asp-validation-for="InstituteName" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="PresentClassCourse" class="block text-sm font-medium text-gray-700">PRESENT CLASS/COURSE *</label>
+            <input asp-for="PresentClassCourse" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" placeholder="Dropdown button" />
+            <span asp-validation-for="PresentClassCourse" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="PresentClassCourseYear" class="block text-sm font-medium text-gray-700">PRESENT CLASS/COURSE YEAR *</label>
+            <input asp-for="PresentClassCourseYear" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+            <span asp-validation-for="PresentClassCourseYear" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="ModeOfStudy" class="block text-sm font-medium text-gray-700">MODE OF STUDY *</label>
+            <select asp-for="ModeOfStudy" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3">
+                <option value="">Select</option>
+                <option value="Regular">Regular</option>
+                <option value="Distance">Distance</option>
+            </select>
+            <span asp-validation-for="ModeOfStudy" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="ClassStartDate" class="block text-sm font-medium text-gray-700">CLASS START DATE *</label>
+            <input asp-for="ClassStartDate" type="date" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+            <span asp-validation-for="ClassStartDate" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+        <div>
+            <label asp-for="UniversityBoardName" class="block text-sm font-medium text-gray-700">UNIVERSITY / BOARD NAME *</label>
+            <input asp-for="UniversityBoardName" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+            <span asp-validation-for="UniversityBoardName" class="text-xs text-red-500 mt-1 block"></span>
+        </div>
+    </div>
+
+    <!-- Previous Class Details -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+        <div>
+            <label asp-for="PreviousClassCourse" class="block text-sm font-medium text-gray-700">PREVIOUS CLASS/COURSE</label>
+            <input asp-for="PreviousClassCourse" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+        </div>
+        <div>
+            <label asp-for="PreviousPassingYear" class="block text-sm font-medium text-gray-700">PREVIOUS PASSING YEAR</label>
+            <input asp-for="PreviousPassingYear" type="number" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+        </div>
+        <div>
+            <label asp-for="PreviousClassPercentage" class="block text-sm font-medium text-gray-700">PREVIOUS CLASS %</label>
+            <input asp-for="PreviousClassPercentage" type="number" step="0.01" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+        </div>
+    </div>
+
+    <!-- 10th Class Details -->
+    <h3 class="text-lg font-bold text-gray-800 border-l-4 border-nsp-blue pl-2 pt-6">10TH CLASS</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+            <label asp-for="Class10RollNumber" class="block text-sm font-medium text-gray-700">ROLL NUMBER</label>
+            <input asp-for="Class10RollNumber" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+        </div>
+        <div>
+            <label asp-for="Class10BoardName" class="block text-sm font-medium text-gray-700">BOARD NAME</label>
+            <input asp-for="Class10BoardName" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+        </div>
+        <div>
+            <label asp-for="Class10Percentage" class="block text-sm font-medium text-gray-700">% OBTAINED</label>
+            <input asp-for="Class10Percentage" type="number" step="0.01" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+        </div>
+    </div>
+
+    <!-- 12th Class Details -->
+    <h3 class="text-lg font-bold text-gray-800 border-l-4 border-nsp-blue pl-2 pt-6">12TH CLASS</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+            <label asp-for="Class12RollNumber" class="block text-sm font-medium text-gray-700">ROLL NUMBER</label>
+            <input asp-for="Class12RollNumber" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+        </div>
+        <div>
+            <label asp-for="Class12BoardName" class="block text-sm font-medium text-gray-700">BOARD NAME</label>
+            <input asp-for="Class12BoardName" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+        </div>
+        <div>
+            <label asp-for="Class12Percentage" class="block text-sm font-medium text-gray-700"> % OBTAINED</label>
+            <input asp-for="Class12Percentage" type="number" step="0.01" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿@model List<ScholarshipPortal.Models.ApplicationStatusViewModel>
+
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-3 flex items-center">
+        <i data-lucide="check-square" class="w-6 h-6 mr-2 text-nsp-blue"></i>
+        Application Status History
+    </h2>
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="text-center py-10 text-gray-500">
+            <i data-lucide="file-text" class="w-12 h-12 mx-auto mb-4"></i>
+            <p class="text-lg font-medium">No applications found yet.</p>
+            <a asp-action="Dashboard" asp-route-activeSection="dashboard" class="text-nsp-blue hover:text-blue-700 font-semibold mt-2 inline-block">View available schemes to apply.</a>
+        </div>
+    }
+    else
+    {
+        <div class="space-y-4">
+            @foreach (var application in Model)
+            {
+                // Dynamic border color based on status
+                string statusClass = application.CurrentStatus switch
+                {
+                    "Approved" => "border-l-4 border-green-500",
+                    "Rejected" => "border-l-4 border-red-500",
+                    "Pending" => "border-l-4 border-yellow-500",
+                    "Submitted" => "border-l-4 border-yellow-500", // Submitted and Pending often use yellow/amber
+                    _ => "border-l-4 border-gray-500"
+                };
+
+                // Dynamic badge color based on status
+                string badgeBgClass = application.CurrentStatus switch
+                {
+                    "Approved" => "bg-green-100 text-green-800",
+                    "Rejected" => "bg-red-100 text-red-800",
+                    "Pending" => "bg-yellow-100 text-yellow-800",
+                    "Submitted" => "bg-yellow-100 text-yellow-800",
+                    _ => "bg-gray-200 text-gray-800"
+                };
+
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm flex justify-between items-center @statusClass hover:shadow-md transition duration-200">
+                    <div class="flex-1 min-w-0 pr-4">
+                        <p class="text-lg font-semibold text-gray-900 truncate">@application.SchemeName</p>
+                        <p class="text-xs text-gray-500 mt-1">Application ID: @application.ApplicationId</p>
+                    </div>
+
+                    <div class="flex-shrink-0 text-right space-y-1">
+                        <!-- Status Badge -->
+                        <span class="inline-block px-3 py-1 text-xs font-bold rounded-full @badgeBgClass shadow-sm uppercase tracking-wider">
+                            @application.CurrentStatus
+                        </span>
+                        <p class="text-xs text-gray-500">Applied: @application.ApplicationDate.ToShortDateString()</p>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

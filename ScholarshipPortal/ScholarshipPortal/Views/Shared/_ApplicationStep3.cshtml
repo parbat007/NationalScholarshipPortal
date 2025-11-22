@@ -1,0 +1,102 @@
+﻿@model ScholarshipPortal.Models.ScholarshipApplicationViewModel
+
+<h2 class="text-xl font-semibold text-nsp-blue mb-4 border-b pb-2">Step 3: Document Uploads & Submission</h2>
+
+<div class="space-y-6">
+    <!-- DOCUMENTS UPLOAD SECTION -->
+    <h3 class="text-lg font-bold text-gray-800 border-l-4 border-nsp-blue pl-2">DOCUMENTS UPLOAD SECTION</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <!-- Helper function defined in C# code block -->
+        @{
+            void RenderUploadRow(string documentName, string modelProperty)
+            {
+                // Generate unique IDs
+                string inputId = $"{modelProperty}Input";
+                string fileNameId = $"{modelProperty}FileName";
+
+                <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <label class="text-sm font-medium text-gray-700">@documentName</label>
+
+                    <div class="flex items-center space-x-3">
+                        <!-- Label acts as the clickable button -->
+                        <label for="@inputId" class="bg-nsp-blue hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition duration-150 shadow-sm cursor-pointer flex-shrink-0">
+                            UPLOAD
+                        </label>
+
+                        <!-- File Name Display -->
+                        <span id="@fileNameId" class="text-xs text-gray-500 italic flex-grow text-right truncate">No file selected</span>
+
+                        <!-- Hidden file input (The actual file picker) -->
+                        <!-- The 'onchange' event triggers the JS function to update the filename display -->
+                        <input type="file" id="@inputId" onchange="updateFileName(this, '@fileNameId')" class="sr-only" />
+
+                        <!-- Hidden input to simulate storing file path in the model (e.g., if we had actual server upload logic) -->
+                        <input type="hidden" name="@modelProperty" value="[uploaded_path_placeholder]" />
+                    </div>
+                </div>
+            }
+        }
+
+        @{
+            RenderUploadRow("DOMICILE CERTIFICATE", "DomicileCertificatePath");
+        }
+        @{
+            RenderUploadRow("STUDENT PHOTOGRAPH", "StudentPhotographPath");
+        }
+        @{
+            RenderUploadRow("INSTITUTE ID CARD", "InstituteIdCardPath");
+        }
+        @{
+            RenderUploadRow("CASTE/INCOME CERTIFICATE", "CasteIncomeCertificatePath");
+        }
+        @{
+            RenderUploadRow("PREVIOUS YEAR MARKSHEET", "PreviousMarksheetPath");
+        }
+        @{
+            RenderUploadRow("FEE RECEIPT OF CURRENT YEAR", "FeeReceiptPath");
+        }
+        @{
+            RenderUploadRow("BANK PASSBOOK (FRONT PAGE)", "BankPassbookPath");
+        }
+        @{
+            RenderUploadRow("AADHAR CARD", "AadhaarCardPath");
+        }
+        @{
+            RenderUploadRow("10TH CLASS MARKSHEET", "Class10MarksheetPath");
+        }
+        @{
+            RenderUploadRow("12TH CLASS MARKSHEET", "Class12MarksheetPath");
+        }
+
+    </div>
+
+    <!-- FINAL DECLARATION -->
+    <div class="pt-6 border-t">
+        <div class="flex items-start">
+            <div class="flex items-center h-5">
+                <input asp-for="FinalDeclarationAccepted" type="checkbox" class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded" />
+            </div>
+            <div class="ml-3 text-sm">
+                <label asp-for="FinalDeclarationAccepted" class="font-medium text-gray-700">
+                    ALL THE DETAILS FURNISHED BY ME ARE TRUE TO THE BEST OF MY KNOWLEDGE...
+                </label>
+                <span asp-validation-for="FinalDeclarationAccepted" class="text-xs text-red-500 mt-1 block"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // FIX: Function to update the file name display and trigger the file picker
+    function updateFileName(inputElement, fileNameId) {
+        const fileNameDisplay = document.getElementById(fileNameId);
+        const file = inputElement.files[0];
+
+        if (file) {
+            fileNameDisplay.textContent = file.name;
+        } else {
+            fileNameDisplay.textContent = 'No file selected';
+        }
+    }
+</script>

@@ -1,0 +1,168 @@
+﻿@model ScholarshipPortal.Models.RegisterViewModel
+
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-3 flex items-center">
+        <i data-lucide="user" class="w-6 h-6 mr-2 text-nsp-blue"></i>
+        My Profile Information
+    </h2>
+
+    <!-- Start of the Edit Form -->
+    <form id="profileForm" asp-controller="Home" asp-action="UpdateProfile" method="post">
+        <input type="hidden" name="activeSection" value="profile" />
+
+        <!-- CRITICAL FIX: Include all non-editable, required fields as hidden inputs -->
+        <!-- These fields ensure the POST request does not send NULL values to SQL Server -->
+        <input type="hidden" name="Email" value="@Model.Email" />
+        <input type="hidden" name="AadhaarNumber" value="@Model.AadhaarNumber" />
+        <input type="hidden" name="DOB" value="@Model.DOB?.ToString("yyyy-MM-dd")" />
+        <input type="hidden" name="BankAccountNumber" value="@Model.BankAccountNumber" />
+        <input type="hidden" name="BankIfscCode" value="@Model.BankIfscCode" />
+        <input type="hidden" name="Password" value="@Model.Password" />
+        <input type="hidden" name="Gender" value="@Model.Gender" /> <!-- *** ADDED MISSING GENDER *** -->
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 text-sm">
+
+            <!-- Section 1: Personal Details -->
+            <div class="space-y-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <h3 class="text-lg font-bold text-nsp-blue border-b border-nsp-blue/30 pb-2 mb-3">Personal & Contact</h3>
+
+                <!-- Full Name (Editable) -->
+                <div class="profile-field" data-field="Name">
+                    <label class="font-medium text-gray-600">Full Name:</label>
+                    <span class="view-mode text-gray-800">@Model.Name</span>
+                    <input type="text" name="Name" value="@Model.Name" class="edit-mode hidden w-full p-2 border rounded" />
+                </div>
+
+                <!-- Email ID (Read-Only) -->
+                <p><span class="font-medium text-gray-600">Email ID:</span> <span class="text-gray-800">@Model.Email</span></p>
+
+                <!-- Mobile No. (Editable) -->
+                <div class="profile-field" data-field="MobileNumber">
+                    <label class="font-medium text-gray-600">Mobile No.:</label>
+                    <span class="view-mode text-gray-800">@Model.MobileNumber</span>
+                    <input type="text" name="MobileNumber" value="@Model.MobileNumber" class="edit-mode hidden w-full p-2 border rounded" />
+                </div>
+
+                <!-- DOB (Read-Only) -->
+                <p><span class="font-medium text-gray-600">Date of Birth:</span> <span class="text-gray-800">@Model.DOB?.ToShortDateString()</span></p>
+
+                <!-- Gender (Read-Only) -->
+                <p><span class="font-medium text-gray-600">Gender:</span> <span class="text-gray-800">@Model.Gender</span></p>
+            </div>
+
+            <!-- Section 2: Domicile & Identity -->
+            <div class="space-y-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <h3 class="text-lg font-bold text-nsp-blue border-b border-nsp-blue/30 pb-2 mb-3">Domicile & Identity</h3>
+
+                <!-- State of Domicile (Editable) -->
+                <div class="profile-field" data-field="StateOfDomicile">
+                    <label class="font-medium text-gray-600">State of Domicile:</label>
+                    <span class="view-mode text-gray-800">@Model.StateOfDomicile</span>
+                    <input type="text" name="StateOfDomicile" value="@Model.StateOfDomicile" class="edit-mode hidden w-full p-2 border rounded" />
+                </div>
+
+                <!-- District (Editable) -->
+                <div class="profile-field" data-field="District">
+                    <label class="font-medium text-gray-600">District:</label>
+                    <span class="view-mode text-gray-800">@Model.District</span>
+                    <input type="text" name="District" value="@Model.District" class="edit-mode hidden w-full p-2 border rounded" />
+                </div>
+
+                <!-- Aadhaar Number (Read-Only) -->
+                <p><span class="font-medium text-gray-600">Aadhaar Number:</span> <span class="text-gray-800">@Model.AadhaarNumber</span></p>
+
+                <!-- Institute Code (Editable) -->
+                <div class="profile-field" data-field="InstituteCode">
+                    <label class="font-medium text-gray-600">Institute Code:</label>
+                    <span class="view-mode text-gray-800">@Model.InstituteCode</span>
+                    <input type="text" name="InstituteCode" value="@Model.InstituteCode" class="edit-mode hidden w-full p-2 border rounded" />
+                </div>
+            </div>
+
+            <!-- Section 3: Bank Details -->
+            <div class="space-y-3 md:col-span-2 p-4 bg-gray-50 rounded-lg border border-gray-200 mt-4">
+                <h3 class="text-lg font-bold text-nsp-blue border-b border-nsp-blue/30 pb-2 mb-3">Bank Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Bank Name (Editable) -->
+                    <div class="profile-field" data-field="BankName">
+                        <label class="font-medium text-gray-600">Bank Name:</label>
+                        <span class="view-mode text-gray-800">@Model.BankName</span>
+                        <input type="text" name="BankName" value="@Model.BankName" class="edit-mode hidden w-full p-2 border rounded" />
+                    </div>
+                    <!-- Account No. (Read-Only) -->
+                    <p><span class="font-medium text-gray-600">Account No.:</span> <span class="text-gray-800">@Model.BankAccountNumber</span></p>
+                    <!-- IFSC Code (Read-Only) -->
+                    <p><span class="font-medium text-gray-600">IFSC Code:</span> <span class="text-gray-800">@Model.BankIfscCode</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t text-right">
+            <!-- Edit Button (Always visible) -->
+            <button type="button" onclick="toggleEdit(true)" id="editButton" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition duration-150 shadow-sm">
+                Edit Profile
+            </button>
+
+            <!-- Save Button (Only visible in edit mode) -->
+            <button type="submit" id="saveButton" class="hidden bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition duration-150 shadow-md ml-3">
+                Save Changes
+            </button>
+
+            <!-- Cancel Button (Only visible in edit mode) -->
+            <button type="button" onclick="toggleEdit(false)" id="cancelButton" class="hidden bg-red-100 hover:bg-red-200 text-red-700 font-medium py-2 px-4 rounded-lg transition duration-150 shadow-sm ml-3">
+                Cancel
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- JavaScript to handle the toggle functionality -->
+<script>
+    let isEditing = false;
+    const profileForm = document.getElementById('profileForm');
+    const editButton = document.getElementById('editButton');
+    const saveButton = document.getElementById('saveButton');
+    const cancelButton = document.getElementById('cancelButton');
+    const fields = document.querySelectorAll('.profile-field');
+
+    function toggleEdit(editMode) {
+        isEditing = editMode;
+
+        // Toggle buttons visibility
+        editButton.classList.toggle('hidden', editMode);
+        saveButton.classList.toggle('hidden', !editMode);
+        cancelButton.classList.toggle('hidden', !editMode);
+
+        fields.forEach(field => {
+            const viewMode = field.querySelector('.view-mode');
+            const editModeInput = field.querySelector('.edit-mode');
+
+            if (editMode) {
+                // Switch to Edit Mode (hide view, show input)
+                viewMode.classList.add('hidden');
+                editModeInput.classList.remove('hidden');
+                // Ensure input value reflects current display value
+                editModeInput.value = viewMode.textContent.trim();
+            } else {
+                // Switch to View Mode (show view, hide input)
+                viewMode.classList.remove('hidden');
+                editModeInput.classList.add('hidden');
+
+                // When canceling, rely on the server refresh to restore state.
+            }
+        });
+
+        // Set the form method based on the mode (POST for save, GET for viewing/canceling)
+        profileForm.method = editMode ? "post" : "get";
+
+        // CRITICAL FIX: Update the form action dynamically
+        if (editMode) {
+            // When editing, the form POSTs to UpdateProfile
+            profileForm.action = '@Url.Action("UpdateProfile", "Home")';
+        } else {
+             // When canceling, the form GETs to reload the clean Dashboard profile view
+             profileForm.action = '@Url.Action("Dashboard", "Home", new { activeSection = "profile" })';
+        }
+    }
+</script>
