@@ -58,6 +58,120 @@ namespace ScholarshipPortal.Migrations
                     b.ToTable("ContactSubmissions");
                 });
 
+            modelBuilder.Entity("ScholarshipPortal.Models.InstituteRegistration", b =>
+                {
+                    b.Property<int>("InstituteId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InstituteId"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AffiliatedUniversityState")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AffiliationCertificate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ConfirmPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DISECode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("District")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EstablishmentCertificate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InstituteCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InstituteName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InstituteType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MobileNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrincipalName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SecurityAnswer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SecurityQuestion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("StateActionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("StateRemarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StateStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telephone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UniversityBoardName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YearAdmissionStarted")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("InstituteId");
+
+                    b.ToTable("Institutes");
+                });
+
+            modelBuilder.Entity("ScholarshipPortal.Models.MinistryUser", b =>
+                {
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("MinistryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Email");
+
+                    b.ToTable("MinistryUsers");
+                });
+
             modelBuilder.Entity("ScholarshipPortal.Models.RegisterViewModel", b =>
                 {
                     b.Property<string>("Email")
@@ -296,6 +410,16 @@ namespace ScholarshipPortal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("StateActionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("StateRemarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StateStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("StreetNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -325,6 +449,38 @@ namespace ScholarshipPortal.Migrations
                     b.HasKey("ApplicationId");
 
                     b.ToTable("ScholarshipApplications");
+                });
+
+            modelBuilder.Entity("ScholarshipPortal.Models.StateOfficer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("StateUsers");
                 });
 #pragma warning restore 612, 618
         }

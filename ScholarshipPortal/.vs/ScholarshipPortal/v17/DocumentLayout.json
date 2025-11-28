@@ -1,115 +1,105 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\",
+  "WorkspaceRootPath": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\ministry\\viewstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\ministry\\viewstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\registrationsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\registrationsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\ministry\\studentapplications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\ministry\\studentapplications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\_contactinfoblock.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_contactinfoblock.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\ministry\\registrationsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\ministry\\registrationsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\_dashboardoverview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_dashboardoverview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\ministry\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\ministry\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NSPortalDB/True/SqlTable/dbo.ScholarshipApplications.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\ministry\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\ministry\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\announcements.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\announcements.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\ministry\\instituteapplications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\ministry\\instituteapplications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\ministry\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\ministry\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\ministry\\_ministrynavbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\ministry\\_ministrynavbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\home\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\home\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\shared\\_layoutministry.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_layoutministry.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\models\\applicationstatusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\applicationstatusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\shared\\_ministrylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_ministrylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\models\\scholarshipapplicationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\models\\instituteregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\instituteregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\models\\scholarshipapplicationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\scholarshipapplicationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\_programcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_programcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\controllers\\ministrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\controllers\\ministrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\_applicationstep1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_applicationstep1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\_applicationstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NSPortalDB/True/SqlTable/dbo.StateUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\shared\\_applicationstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_applicationstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\models\\statedistrictviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\statedistrictviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\_applicationstep2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_applicationstep2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\home\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\home\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\views\\shared\\_applicationstep3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\shared\\_applicationstep3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NSPortalDB/True/SqlTable/dbo.__EFMigrationsHistory.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NSPortalDB/True/SqlTable/dbo.RegisteredUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\migrations\\20251128061131_ministry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\migrations\\20251128061131_ministry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Migrations\\20251122083909_SeceondCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ScholarshipPortal\\Migrations\\20251122083909_SeceondCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\models\\ministryuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\ministryuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\train\\first\\sp\\scholarshipportal\\scholarshipportal\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|c:\\users\\du997hf\\onedrive - ey\\desktop\\nnsp - copy\\nationalscholarshipportal\\scholarshipportal\\scholarshipportal\\models\\ministrydashboardviewmodelcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB1F98E-4A1C-4862-98A4-20C011622D69}|ScholarshipPortal\\ScholarshipPortal.csproj|solutionrelative:scholarshipportal\\models\\ministrydashboardviewmodelcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -119,360 +109,317 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAmwJoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T09:06:01.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentApplications.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\StudentApplications.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Ministry\\StudentApplications.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\StudentApplications.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Ministry\\StudentApplications.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T06:01:29.523Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "ScholarshipPortal\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAowLUAAACGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T11:45:13.542Z",
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\Register.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Ministry\\Register.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\Register.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Ministry\\Register.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T06:00:35.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\Login.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Ministry\\Login.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\Login.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Ministry\\Login.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T06:00:19.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ViewStudent.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\ViewStudent.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Ministry\\ViewStudent.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\ViewStudent.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Ministry\\ViewStudent.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T08:54:59.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAAAHsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T12:28:31.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\Register.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\Register.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\Register.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\Register.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAABYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-21T09:13:45.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "RegistrationSuccess.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\RegistrationSuccess.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\RegistrationSuccess.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\RegistrationSuccess.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\RegistrationSuccess.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\RegistrationSuccess.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Ministry\\RegistrationSuccess.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\RegistrationSuccess.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Ministry\\RegistrationSuccess.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-21T09:15:12.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\RegisterViewModel.cs",
-              "RelativeToolTip": "ScholarshipPortal\\Models\\RegisterViewModel.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwEkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T09:12:32.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAE0AAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-20T18:04:58.7Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_ContactInfoBlock.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ContactInfoBlock.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_ContactInfoBlock.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ContactInfoBlock.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_ContactInfoBlock.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T12:26:19.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T06:02:02.6Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ContactUs.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\ContactUs.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Home\\ContactUs.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\ContactUs.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Home\\ContactUs.cshtml",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAKAAAAA9AAAAAAAAAA==",
+              "Title": "InstituteApplications.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\InstituteApplications.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Ministry\\InstituteApplications.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\InstituteApplications.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Ministry\\InstituteApplications.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T12:26:38.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T06:01:00.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Ministry\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\Dashboard.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Ministry\\Dashboard.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T06:00:05.448Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "_DashboardOverview.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_DashboardOverview.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_DashboardOverview.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_DashboardOverview.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_DashboardOverview.cshtml",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACwAAAAhAAAAAAAAAA==",
+              "Title": "_MinistryNavbar.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\_MinistryNavbar.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Ministry\\_MinistryNavbar.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Ministry\\_MinistryNavbar.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Ministry\\_MinistryNavbar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T07:46:44.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T05:59:17.4Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "dbo.ScholarshipApplications [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NSPortalDB/True/SqlTable/dbo.ScholarshipApplications.sql",
-              "ToolTip": "dbo.ScholarshipApplications [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-11-22T12:15:18.089Z",
-              "EditorCaption": ""
+              "Title": "_LayoutMinistry.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_LayoutMinistry.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_LayoutMinistry.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_LayoutMinistry.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_LayoutMinistry.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T08:59:13.982Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Announcements.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\Announcements.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\Announcements.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\Announcements.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\Announcements.cshtml",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAAABEBAAABAAAAAAAAAA==",
+              "Title": "_MinistryLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_MinistryLayout.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_MinistryLayout.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_MinistryLayout.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_MinistryLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-21T16:34:35.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T08:57:44.747Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\DashboardViewModel.cs",
-              "RelativeToolTip": "ScholarshipPortal\\Models\\DashboardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Title": "InstituteRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\InstituteRegistration.cs",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\InstituteRegistration.cs",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\InstituteRegistration.cs",
+              "RelativeToolTip": "ScholarshipPortal\\Models\\InstituteRegistration.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T12:43:28.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Apply.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Apply.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Home\\Apply.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Apply.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Home\\Apply.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T06:47:48.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ApplicationStatusViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\ApplicationStatusViewModel.cs",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\ApplicationStatusViewModel.cs",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\ApplicationStatusViewModel.cs",
-              "RelativeToolTip": "ScholarshipPortal\\Models\\ApplicationStatusViewModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T07:24:29.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ScholarshipApplicationViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\ScholarshipApplicationViewModel.cs",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\ScholarshipApplicationViewModel.cs",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\ScholarshipApplicationViewModel.cs",
-              "RelativeToolTip": "ScholarshipPortal\\Models\\ScholarshipApplicationViewModel.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAE4AAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T06:43:34.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T08:53:25.176Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Dashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Dashboard.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Home\\Dashboard.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Dashboard.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Home\\Dashboard.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T11:04:49.696Z",
-              "EditorCaption": ""
+              "Title": "ScholarshipApplicationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\ScholarshipApplicationViewModel.cs",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\ScholarshipApplicationViewModel.cs",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\ScholarshipApplicationViewModel.cs",
+              "RelativeToolTip": "ScholarshipPortal\\Models\\ScholarshipApplicationViewModel.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAcwO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T08:52:36.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "_ProgramCard.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ProgramCard.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_ProgramCard.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ProgramCard.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_ProgramCard.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T11:38:00.946Z",
-              "EditorCaption": ""
+              "DocumentIndex": 14,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ScholarshipPortal\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAmwM8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:16:19.721Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "_ApplicationStep1.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStep1.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_ApplicationStep1.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStep1.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_ApplicationStep1.cshtml",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAE4AAAAVAAAAAAAAAA==",
+              "Title": "_ApplicationStatus.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStatus.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_ApplicationStatus.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStatus.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_ApplicationStatus.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T06:53:21.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T06:38:27.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\DashboardViewModel.cs",
+              "RelativeToolTip": "ScholarshipPortal\\Models\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T06:35:45.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MinistryController.cs",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Controllers\\MinistryController.cs",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Controllers\\MinistryController.cs",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Controllers\\MinistryController.cs",
+              "RelativeToolTip": "ScholarshipPortal\\Controllers\\MinistryController.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAAPAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T05:56:23.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "dbo.StateUsers.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NSPortalDB/True/SqlTable/dbo.StateUsers.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NSPortalDB/True/SqlTable/dbo.StateUsers.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-11-28T07:08:39.417Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "_ApplicationStatus.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStatus.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_ApplicationStatus.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStatus.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_ApplicationStatus.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-21T13:10:12.468Z",
-              "EditorCaption": ""
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ScholarshipPortal\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T06:07:08.489Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "StateDistrictViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\StateDistrictViewModel.cs",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\StateDistrictViewModel.cs",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\StateDistrictViewModel.cs",
-              "RelativeToolTip": "ScholarshipPortal\\Models\\StateDistrictViewModel.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAuwDsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T10:09:55.855Z",
-              "EditorCaption": ""
+              "Title": "Apply.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Apply.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Home\\Apply.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Apply.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Home\\Apply.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T06:45:37.499Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "ScholarshipPortal\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T09:23:06.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "_ApplicationStep3.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStep3.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_ApplicationStep3.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStep3.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_ApplicationStep3.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAFwBAAAAAAAAAAAAAJ0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T06:55:53.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T06:36:49.374Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "_ApplicationStep2.cshtml",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStep2.cshtml",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Shared\\_ApplicationStep2.cshtml",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Views\\Shared\\_ApplicationStep2.cshtml",
-              "RelativeToolTip": "ScholarshipPortal\\Views\\Shared\\_ApplicationStep2.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGEAAAAOAAAAAAAAAA==",
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Views\\Home\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Views\\Home\\Dashboard.cshtml",
+              "RelativeToolTip": "ScholarshipPortal\\Views\\Home\\Dashboard.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAABIAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T06:53:43.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T06:36:20.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20251128061131_Ministry.cs",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Migrations\\20251128061131_Ministry.cs",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Migrations\\20251128061131_Ministry.cs",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Migrations\\20251128061131_Ministry.cs",
+              "RelativeToolTip": "ScholarshipPortal\\Migrations\\20251128061131_Ministry.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T06:11:31.366Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "dbo.__EFMigrationsHistory [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NSPortalDB/True/SqlTable/dbo.__EFMigrationsHistory.sql",
-              "ToolTip": "dbo.__EFMigrationsHistory [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-11-22T09:21:33.254Z",
-              "EditorCaption": ""
+              "Title": "MinistryUser.cs",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\MinistryUser.cs",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\MinistryUser.cs",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\MinistryUser.cs",
+              "RelativeToolTip": "ScholarshipPortal\\Models\\MinistryUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T05:58:00.39Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "dbo.RegisteredUsers [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NSPortalDB/True/SqlTable/dbo.RegisteredUsers.sql",
-              "ToolTip": "dbo.RegisteredUsers [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-11-22T09:21:23.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "20251122083909_SeceondCreate.cs",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Migrations\\20251122083909_SeceondCreate.cs",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Migrations\\20251122083909_SeceondCreate.cs",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Migrations\\20251122083909_SeceondCreate.cs",
-              "RelativeToolTip": "ScholarshipPortal\\Migrations\\20251122083909_SeceondCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MinistryDashboardViewModelcs.cs",
+              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\MinistryDashboardViewModelcs.cs",
+              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\MinistryDashboardViewModelcs.cs",
+              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\Models\\MinistryDashboardViewModelcs.cs",
+              "RelativeToolTip": "ScholarshipPortal\\Models\\MinistryDashboardViewModelcs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T08:39:09.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\Models\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\Models\\LoginViewModel.cs",
-              "RelativeToolTip": "ScholarshipPortal\\Models\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T09:13:08.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\appsettings.json",
-              "RelativeDocumentMoniker": "ScholarshipPortal\\appsettings.json",
-              "ToolTip": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\Train\\First\\SP\\ScholarshipPortal\\ScholarshipPortal\\appsettings.json",
-              "RelativeToolTip": "ScholarshipPortal\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-21T09:23:44.794Z"
+              "WhenOpened": "2025-11-28T05:57:18.156Z"
             }
           ]
         }

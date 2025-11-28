@@ -1,0 +1,169 @@
+﻿@model ScholarshipPortal.Models.InstituteRegistration
+
+@{
+    ViewData["Title"] = "Institute Registration";
+}
+
+<div class="min-h-screen bg-gradient-to-br from-blue-700 to-indigo-800 flex items-center justify-center py-8 px-4">
+    <div class="w-full max-w-4xl bg-white p-10 rounded-xl shadow-2xl">
+
+        <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">
+            Institute Registration
+        </h2>
+
+        <form asp-action="Register" method="post" enctype="multipart/form-data">
+
+            <!-- INSTITUTE DETAILS -->
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Institute Details</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div>
+                    <label asp-for="InstituteName" class="font-medium"></label>
+                    <input asp-for="InstituteName" class="form-input w-full" />
+                    <span asp-validation-for="InstituteName" class="text-red-600 text-sm"></span>
+                </div>
+
+                <div>
+                    <label asp-for="InstituteCode" class="font-medium"></label>
+                    <input asp-for="InstituteCode" class="form-input w-full" />
+                    <span asp-validation-for="InstituteCode" class="text-red-600 text-sm"></span>
+                </div>
+
+                <!-- 🔥 FIXED | Email field added -->
+                <div>
+                    <label asp-for="Email" class="font-medium"></label>
+                    <input asp-for="Email" class="form-input w-full" />
+                    <span asp-validation-for="Email" class="text-red-600 text-sm"></span>
+                </div>
+
+                <div>
+                    <label asp-for="DISECode" class="font-medium"></label>
+                    <input asp-for="DISECode" class="form-input w-full" />
+                </div>
+
+                <div>
+                    <label asp-for="State" class="font-medium"></label>
+                    <input asp-for="State" class="form-input w-full" />
+                    <span asp-validation-for="State" class="text-red-600 text-sm"></span>
+                </div>
+
+                <div>
+                    <label asp-for="District" class="font-medium"></label>
+                    <input asp-for="District" class="form-input w-full" />
+                    <span asp-validation-for="District" class="text-red-600 text-sm"></span>
+                </div>
+
+                <div>
+                    <label asp-for="Location" class="font-medium"></label>
+                    <input asp-for="Location" class="form-input w-full" />
+                </div>
+
+                <div>
+                    <label asp-for="InstituteType" class="font-medium"></label>
+                    <input asp-for="InstituteType" class="form-input w-full" />
+                </div>
+
+                <div>
+                    <label asp-for="YearAdmissionStarted" class="font-medium"></label>
+                    <input asp-for="YearAdmissionStarted" class="form-input w-full" />
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <label asp-for="Address" class="font-medium"></label>
+                <textarea asp-for="Address" rows="3" class="form-input w-full"></textarea>
+                <span asp-validation-for="Address" class="text-red-600 text-sm"></span>
+            </div>
+
+            <!-- AFFILIATION DETAILS -->
+            <h3 class="text-xl font-semibold text-gray-800 mt-10 mb-4 border-b pb-2">Affiliation Details</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label asp-for="AffiliatedUniversityState" class="font-medium"></label>
+                    <input asp-for="AffiliatedUniversityState" class="form-input w-full" />
+                </div>
+
+                <div>
+                    <label asp-for="UniversityBoardName" class="font-medium"></label>
+                    <input asp-for="UniversityBoardName" class="form-input w-full" />
+                </div>
+
+                <div>
+                    <label asp-for="EstablishmentCertificate" class="font-medium"></label>
+                    <input asp-for="EstablishmentCertificate" type="file" class="form-input w-full" />
+                </div>
+
+                <div>
+                    <label asp-for="AffiliationCertificate" class="font-medium"></label>
+                    <input asp-for="AffiliationCertificate" type="file" class="form-input w-full" />
+                </div>
+            </div>
+
+            <!-- PRINCIPAL & CONTACT -->
+            <h3 class="text-xl font-semibold text-gray-800 mt-10 mb-4 border-b pb-2">Principal & Contact</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label asp-for="PrincipalName" class="font-medium"></label>
+                    <input asp-for="PrincipalName" class="form-input w-full" />
+                    <span asp-validation-for="PrincipalName" class="text-red-600 text-sm"></span>
+                </div>
+
+                <div>
+                    <label asp-for="MobileNumber" class="font-medium"></label>
+                    <input asp-for="MobileNumber" class="form-input w-full" />
+                    <span asp-validation-for="MobileNumber" class="text-red-600 text-sm"></span>
+                </div>
+
+                <div>
+                    <label asp-for="Telephone" class="font-medium"></label>
+                    <input asp-for="Telephone" class="form-input w-full" />
+                </div>
+            </div>
+
+            <!-- LOGIN & SECURITY -->
+            <h3 class="text-xl font-semibold text-gray-800 mt-10 mb-4 border-b pb-2">Login & Security</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label asp-for="Password" class="font-medium"></label>
+                    <input asp-for="Password" type="password" class="form-input w-full" />
+                    <span asp-validation-for="Password" class="text-red-600 text-sm"></span>
+                </div>
+
+                <div>
+                    <label asp-for="ConfirmPassword" class="font-medium"></label>
+                    <input asp-for="ConfirmPassword" type="password" class="form-input w-full" />
+                    <span asp-validation-for="ConfirmPassword" class="text-red-600 text-sm"></span>
+                </div>
+
+                <div>
+                    <label asp-for="SecurityQuestion" class="font-medium"></label>
+                    <input asp-for="SecurityQuestion" class="form-input w-full" />
+                </div>
+
+                <div>
+                    <label asp-for="SecurityAnswer" class="font-medium"></label>
+                    <input asp-for="SecurityAnswer" class="form-input w-full" />
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-10 rounded-lg text-lg shadow-md transition-all">
+                    Register
+                </button>
+            </div>
+
+            <p class="text-center mt-6 text-gray-700">
+                Already have an account? <a href="/Institute/Login" class="text-blue-700 font-semibold">Login here</a>
+            </p>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

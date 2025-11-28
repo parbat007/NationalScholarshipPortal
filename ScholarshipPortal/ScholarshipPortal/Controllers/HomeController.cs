@@ -137,17 +137,16 @@ namespace ScholarshipPortal.Controllers
         {
             string userEmail = TempData.Peek("AuthenticatedUserEmail")?.ToString();
 
-            // --- Authentication Check ---
+            // Authentication Check
             if (string.IsNullOrEmpty(userEmail))
             {
                 TempData["ErrorMessage"] = "You must be logged in to access the dashboard.";
                 return RedirectToAction(nameof(Login));
             }
 
-            // --- Fetch User Profile ---
-            // Fetch the user data WITHOUT AsNoTracking, as we need it tracked for the display
+            // Fetch Profile
             var userProfile = await _context.RegisteredUsers
-                                .FirstOrDefaultAsync(u => u.Email == userEmail);
+                                   .FirstOrDefaultAsync(u => u.Email == userEmail);
 
             if (userProfile == null)
             {
@@ -156,41 +155,69 @@ namespace ScholarshipPortal.Controllers
                 return RedirectToAction(nameof(Login));
             }
 
-            // --- DATA SIMULATION for Dashboard Content ---
+            // Get ALL applications submitted by student
+            var userApplications = await _context.ScholarshipApplications
+                                                 .Where(a => a.UserId == userEmail)
+                                                 .OrderByDescending(a => a.SubmissionDate)
+                                                 .ToListAsync();
 
-            // Mock summary data based on current state (could pull from a Status table in a real app)
+            // -----------------------------
+            // BUILD APPLICATION STATUS VIEW
+            // -----------------------------
+            var applicationStatuses = userApplications.Select(a => new ApplicationStatusViewModel
+            {
+                ApplicationId = a.ApplicationId,
+                SchemeName = a.SchemeName,
+                ApplicationDate = a.SubmissionDate,
+
+                // Read REAL statuses
+                CurrentStatus = a.MinistryStatus ?? a.StateStatus ?? "Submitted",
+
+                StatusColor =
+                    a.MinistryStatus == "Approved" ? "green" :
+                    a.MinistryStatus == "Rejected" ? "red" :
+                    a.StateStatus == "ForwardedToMinistry" ? "blue" :
+                    a.StateStatus == "Rejected" ? "red" :
+                    "yellow",  // Pending
+
+                InstituteVerificationDate =
+                    a.StateActionDate?.ToString("dd MMM yyyy") ?? "N/A"
+
+            }).ToList();
+
+
+            // -----------------------------
+            // SUMMARY COUNTERS
+            // -----------------------------
             var summary = new DashboardSummaryViewModel
             {
-                TotalApplied = 3,
-                Approved = 1,
-                Pending = 2,
-                Rejected = 0
+                TotalApplied = applicationStatuses.Count,
+                Approved = applicationStatuses.Count(s => s.CurrentStatus == "Approved"),
+                Rejected = applicationStatuses.Count(s => s.CurrentStatus == "Rejected"),
+                Pending = applicationStatuses.Count(s => s.CurrentStatus == "Submitted" || s.CurrentStatus == "Pending")
             };
 
-            // Mock status history
-            var statuses = new List<ApplicationStatusViewModel>
-            {
-                new ApplicationStatusViewModel { ApplicationId = 1001, SchemeName = "Post Matric Scholarship", ApplicationDate = new DateTime(2025, 8, 1), CurrentStatus = "Pending", StatusColor = "yellow", InstituteVerificationDate = "10/08/2025" },
-                new ApplicationStatusViewModel { ApplicationId = 1002, SchemeName = "PRAGATI Scholarship", ApplicationDate = new DateTime(2025, 9, 5), CurrentStatus = "Approved", StatusColor = "green", InstituteVerificationDate = "15/09/2025" },
-                new ApplicationStatusViewModel { ApplicationId = 1003, SchemeName = "Merit Based Scholarship (NTSE)", ApplicationDate = new DateTime(2025, 10, 20), CurrentStatus = "Submitted", StatusColor = "yellow", InstituteVerificationDate = "N/A" }
-            };
-
-            // Mock available schemes
+            // -----------------------------
+            // PROGRAM CARDS
+            // -----------------------------
             var schemes = new List<ProgramCardViewModel>
-            {
-                new ProgramCardViewModel { Title = "Post Matric Scholarship", Description = "For students pursuing higher education.", Amount = "Up to 50,000" },
-                new ProgramCardViewModel { Title = "Scholarship Meant For Girls(PRAGATI)", Description = "Promotes education for girls.", Amount = "Up to 30,000" }
-            };
+    {
+        new ProgramCardViewModel { Title = "Post Matric Scholarship", Description = "For students pursuing higher education.", Amount = "Varies by Scheme" },
+        new ProgramCardViewModel { Title = "Scholarship Meant For Girls(PRAGATI)", Description = "Promotes education for girls.", Amount = "Up to 30,000" }
+    };
 
+            // FINAL VIEWMODEL
             var viewModel = new DashboardViewModel
             {
                 UserProfile = userProfile,
                 Summary = summary,
-                ApplicationStatuses = statuses,
+                ApplicationStatuses = applicationStatuses,
                 AvailableSchemes = schemes
             };
 
             ViewData["ActiveSection"] = activeSection;
+            TempData.Keep("AuthenticatedUserEmail");
+
             return View(viewModel);
         }
 

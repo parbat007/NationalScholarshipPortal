@@ -1,0 +1,35 @@
+﻿@{
+
+    ViewData["Title"] = "Registration Successful";
+
+    Layout = "~/Views/Shared/_LayoutMinistry.cshtml";
+
+}
+
+<partial name="_MinistryNavbar" />
+
+<div class="hero-gradient min-h-screen flex items-center justify-center py-8">
+    <div class="bg-white p-10 rounded-xl shadow-2xl max-w-md text-center">
+
+        <div class="flex justify-center mb-4">
+            <div class="p-4 bg-green-100 rounded-full">
+                <i data-lucide="check-circle" class="w-10 h-10 text-green-600"></i>
+            </div>
+        </div>
+
+        <h1 class="text-3xl font-bold text-nsp-blue mb-3">Registration Successful!</h1>
+
+        <p class="text-gray-600 mb-6">
+
+            Your Ministry Account has been created successfully.
+        </p>
+
+        <a asp-controller="Ministry" asp-action="Login"
+           class="px-6 py-3 bg-nsp-blue text-white rounded-lg hover:bg-blue-700">
+
+            Proceed to Login
+        </a>
+
+    </div>
+</div>
+

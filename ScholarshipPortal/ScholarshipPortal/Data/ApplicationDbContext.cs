@@ -14,9 +14,14 @@ namespace ScholarshipPortal.Data
         // DbSets represent the tables in the database
         public DbSet<RegisterViewModel> RegisteredUsers { get; set; }
         public DbSet<ContactViewModel> ContactSubmissions { get; set; }
+        public DbSet<InstituteRegistration> Institutes { get; set; }
+
+        public DbSet<MinistryUser> MinistryUsers { get; set; }
 
         // *** CRITICAL FIX: ADDED NEW DbSet for Scholarship Application ***
         public DbSet<ScholarshipApplicationViewModel> ScholarshipApplications { get; set; }
+
+        public DbSet<StateOfficer> StateUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,6 +31,12 @@ namespace ScholarshipPortal.Data
             modelBuilder.Entity<RegisterViewModel>()
                 .Property(r => r.DOB)
                 .HasColumnType("date");
+
+            // Enforce unique email for State Officers
+            modelBuilder.Entity<StateOfficer>()
+                .HasIndex(s => s.Email)
+                .IsUnique();
+
 
             // Configure decimal types for ScholarshipApplicationViewModel
             modelBuilder.Entity<ScholarshipApplicationViewModel>().Property(a => a.FamilyAnnualIncome).HasColumnType("decimal(18, 2)");

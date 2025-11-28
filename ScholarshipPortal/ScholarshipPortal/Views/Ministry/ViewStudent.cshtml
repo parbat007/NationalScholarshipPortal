@@ -1,0 +1,191 @@
+﻿@model ScholarshipPortal.Models.ScholarshipApplicationViewModel
+
+@{
+
+    ViewData["Title"] = "Student Application Review";
+
+}
+ 
+<div class="min-h-screen bg-gray-100 py-10">
+<div class="max-w-6xl mx-auto">
+ 
+        <!-- HEADER -->
+<div class="bg-white shadow rounded-xl p-6 mb-8 border-l-4 border-blue-600 flex justify-between items-center">
+<div>
+<h2 class="text-2xl font-bold text-blue-700">
+
+                    Student Application #@Model.ApplicationId
+</h2>
+<p class="text-gray-600 text-sm">
+
+                    Review all submitted details before approval.
+</p>
+</div>
+ 
+            <a asp-action="StudentApplications"
+
+               class="text-blue-700 font-semibold hover:underline">← Back</a>
+</div>
+ 
+        <!-- BASIC DETAILS -->
+<div class="bg-white rounded-xl shadow p-6 mb-6">
+<h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Personal Details</h3>
+ 
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div>
+<p class="text-gray-500 text-sm">Email</p>
+<p class="font-medium text-gray-900">@Model.UserId</p>
+</div>
+ 
+                <div>
+<p class="text-gray-500 text-sm">Aadhaar Number</p>
+<p class="font-medium text-gray-900">@Model.AadhaarNumber</p>
+</div>
+ 
+                <div>
+<p class="text-gray-500 text-sm">Religion</p>
+<p class="font-medium text-gray-900">@Model.Religion</p>
+</div>
+ 
+                <div>
+<p class="text-gray-500 text-sm">Community Category</p>
+<p class="font-medium text-gray-900">@Model.CommunityCategory</p>
+</div>
+ 
+                <div>
+<p class="text-gray-500 text-sm">Father Name</p>
+<p class="font-medium text-gray-900">@Model.FatherName</p>
+</div>
+ 
+                <div>
+<p class="text-gray-500 text-sm">Mother Name</p>
+<p class="font-medium text-gray-900">@Model.MotherName</p>
+</div>
+</div>
+</div>
+ 
+ 
+        <!-- COURSE DETAILS -->
+<div class="bg-white rounded-xl shadow p-6 mb-6">
+<h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Education Details</h3>
+ 
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+ 
+                <div>
+<p class="text-gray-500 text-sm">Institute Name</p>
+<p class="font-medium text-gray-900">@Model.InstituteName</p>
+</div>
+ 
+                <div>
+<p class="text-gray-500 text-sm">Present Course</p>
+<p class="font-medium text-gray-900">@Model.PresentClassCourse</p>
+</div>
+ 
+                <div>
+<p class="text-gray-500 text-sm">Course Year</p>
+<p class="font-medium text-gray-900">@Model.PresentClassCourseYear</p>
+</div>
+ 
+                <div>
+<p class="text-gray-500 text-sm">Mode of Study</p>
+<p class="font-medium text-gray-900">@Model.ModeOfStudy</p>
+</div>
+</div>
+</div>
+ 
+ 
+        <!-- DOCUMENTS -->
+<div class="bg-white rounded-xl shadow p-6 mb-6">
+<h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Uploaded Documents</h3>
+ 
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+ 
+                @{
+
+                    var docs = new Dictionary<string, string>
+
+                                {
+
+                                { "Domicile Certificate", Model.DomicileCertificatePath },
+
+                                { "Student Photo", Model.StudentPhotographPath },
+
+                                { "Institute ID Card", Model.InstituteIdCardPath },
+
+                                { "Caste/Income Certificate", Model.CasteIncomeCertificatePath },
+
+                                { "Previous Marksheet", Model.PreviousMarksheetPath },
+
+                                { "Fee Receipt", Model.FeeReceiptPath },
+
+                                { "Bank Passbook", Model.BankPassbookPath },
+
+                                { "Aadhaar Card", Model.AadhaarCardPath },
+
+                                { "10th Marksheet", Model.Class10MarksheetPath },
+
+                                { "12th Marksheet", Model.Class12MarksheetPath }
+
+                                };
+
+                }
+ 
+                @foreach (var item in docs)
+
+                {
+<div>
+<p class="font-semibold text-gray-900">@item.Key</p>
+ 
+                        @if (!string.IsNullOrEmpty(item.Value))
+
+                        {
+<a href="@Url.Content(item.Value)" target="_blank"
+
+                               class="text-blue-600 hover:underline">View</a>
+
+                        }
+
+                        else
+
+                        {
+<p class="text-gray-500">Not uploaded</p>
+
+                        }
+</div>
+
+                }
+</div>
+</div>
+ 
+ 
+        <!-- DECISION SECTION -->
+<div class="bg-white rounded-xl shadow p-6">
+<h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Ministry Decision</h3>
+ 
+            <form asp-action="ProcessStudent" method="post">
+<input type="hidden" name="id" value="@Model.ApplicationId" />
+ 
+                <label class="font-medium text-gray-700">Remarks</label>
+<textarea name="remarks" rows="3" class="w-full border rounded-lg p-3 mb-4"></textarea>
+ 
+                <div class="flex gap-4">
+<button name="decision" value="Approve"
+
+                            class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold">
+
+                        Approve
+</button>
+ 
+                    <button name="decision" value="Reject"
+
+                            class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold">
+
+                        Reject
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+ 

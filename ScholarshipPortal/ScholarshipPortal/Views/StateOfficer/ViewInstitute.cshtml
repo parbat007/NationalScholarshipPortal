@@ -1,0 +1,170 @@
+﻿@model ScholarshipPortal.Models.InstituteRegistration
+@{
+    ViewData["Title"] = "Process Institute Registration";
+}
+
+<div class="min-h-screen bg-gray-100 py-10">
+    <div class="max-w-5xl mx-auto">
+
+        <!-- Header -->
+        <div class="bg-white shadow rounded-xl p-6 mb-6 border-l-4 border-blue-600 flex justify-between items-center">
+            <div>
+                <h2 class="text-2xl font-bold text-blue-700">Institute Registration #@Model.InstituteId</h2>
+                <p class="text-gray-600 text-sm">Review & verify the institute registration details</p>
+            </div>
+
+            <a asp-action="Dashboard"
+               class="text-blue-600 hover:underline text-sm font-semibold">
+                ← Back to Dashboard
+            </a>
+        </div>
+
+        <!-- INSTITUTE DETAILS -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Institute Information</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                <div>
+                    <p class="text-gray-500 text-sm">Institute Name</p>
+                    <p class="font-medium text-gray-800">@Model.InstituteName</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Institute Code</p>
+                    <p class="font-medium text-gray-800">@Model.InstituteCode</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Email</p>
+                    <p class="font-medium text-gray-800">@Model.Email</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">DISE Code</p>
+                    <p class="font-medium text-gray-800">@Model.DISECode</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">State</p>
+                    <p class="font-medium text-gray-800">@Model.State</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">District</p>
+                    <p class="font-medium text-gray-800">@Model.District</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Location</p>
+                    <p class="font-medium text-gray-800">@Model.Location</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Institute Type</p>
+                    <p class="font-medium text-gray-800">@Model.InstituteType</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Year Admission Started</p>
+                    <p class="font-medium text-gray-800">@Model.YearAdmissionStarted</p>
+                </div>
+
+                <div class="sm:col-span-2">
+                    <p class="text-gray-500 text-sm">Full Address</p>
+                    <p class="font-medium text-gray-800">@Model.Address</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- AFFILIATION DETAILS -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Affiliation Details</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                    <p class="text-gray-500 text-sm">Affiliated University State</p>
+                    <p class="font-medium text-gray-800">@Model.AffiliatedUniversityState</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">University / Board Name</p>
+                    <p class="font-medium text-gray-800">@Model.UniversityBoardName</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Establishment Certificate</p>
+                    <p class="font-medium text-blue-700 underline">@Model.EstablishmentCertificate</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Affiliation Certificate</p>
+                    <p class="font-medium text-blue-700 underline">@Model.AffiliationCertificate</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PRINCIPAL & CONTACT -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Principal & Contact</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                    <p class="text-gray-500 text-sm">Principal Name</p>
+                    <p class="font-medium text-gray-800">@Model.PrincipalName</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Mobile Number</p>
+                    <p class="font-medium text-gray-800">@Model.MobileNumber</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Telephone</p>
+                    <p class="font-medium text-gray-800">@Model.Telephone</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CURRENT STATUS -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Current Status</h3>
+
+            <p class="text-gray-700">
+                <span class="font-semibold">State Status:</span>
+                @Model.StateStatus
+            </p>
+        </div>
+
+
+        <!-- DECISION FORM -->
+@if (Model.StateStatus == "Pending")
+{
+            <div class="bg-white rounded-xl shadow p-6 mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Decision</h3>
+
+                <form asp-action="ProcessInstitute" method="post">
+                    <input type="hidden" name="id" value="@Model.InstituteId" />
+
+                    <label class="font-medium text-gray-700">Remarks (optional)</label>
+                    <textarea name="remarks" rows="3"
+                          class="w-full border rounded-lg p-3 mb-4"></textarea>
+
+                    <div class="flex gap-4">
+                        <button name="decision" value="Approve"
+                                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold">
+                            Forward to Ministry
+                        </button>
+
+                        <button name="decision" value="Reject"
+                                class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold">
+                            Reject
+                        </button>
+                    </div>
+                </form>
+            </div>
+}
+

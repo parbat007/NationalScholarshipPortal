@@ -1,0 +1,99 @@
+﻿@model ScholarshipPortal.Models.InstituteRegistration
+
+@{
+
+    ViewData["Title"] = "Institute Review";
+
+}
+
+<div class="min-h-screen bg-gray-100 py-10">
+    <div class="max-w-5xl mx-auto">
+
+        <!-- HEADER -->
+        <div class="bg-white shadow rounded-xl p-6 mb-6 border-l-4 border-blue-600 flex justify-between items-center">
+            <div>
+                <h2 class="text-2xl font-bold text-blue-700">
+
+                    Institute #@Model.InstituteId
+                </h2>
+                <p class="text-gray-600 text-sm">Review Institute Registration</p>
+            </div>
+
+            <a asp-action="InstituteApplications" class="text-blue-600 hover:underline text-sm font-semibold">
+
+                ← Back
+            </a>
+        </div>
+
+        <!-- DETAILS -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Institute Details</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                <div>
+                    <p class="text-gray-500 text-sm">Institution Name</p>
+                    <p class="font-medium text-gray-800">@Model.InstituteName</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Institute Code</p>
+                    <p class="font-medium text-gray-800">@Model.InstituteCode</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Email</p>
+                    <p class="font-medium text-gray-800">@Model.Email</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">DISE Code</p>
+                    <p class="font-medium text-gray-800">@Model.DISECode</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">State</p>
+                    <p class="font-medium text-gray-800">@Model.State</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">District</p>
+                    <p class="font-medium text-gray-800">@Model.District</p>
+                </div>
+
+                <div class="sm:col-span-2">
+                    <p class="text-gray-500 text-sm">Address</p>
+                    <p class="font-medium text-gray-800">@Model.Address</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DECISION -->
+        <div class="bg-white rounded-xl shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Decision</h3>
+
+            <form asp-action="ProcessInstitute" method="post">
+                <input type="hidden" name="id" value="@Model.InstituteId" />
+
+                <label class="font-medium text-gray-700">Remarks</label>
+<textarea name="remarks" rows="3" class="w-full border rounded-lg p-3 mb-4"></textarea>
+
+                <div class="flex gap-4">
+                    <button name="decision" value="Approve"
+                            class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold">
+
+                        Approve
+                    </button>
+
+                    <button name="decision" value="Reject"
+                            class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold">
+
+                        Reject
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+

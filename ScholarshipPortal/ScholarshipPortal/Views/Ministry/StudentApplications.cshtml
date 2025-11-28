@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ScholarshipPortal.Models.ScholarshipApplicationViewModel>
+
+@{
+
+    ViewData["Title"] = "Student Applications";
+
+    Layout = "~/Views/Shared/_LayoutMinistry.cshtml";
+
+}
+
+<div class="max-w-6xl mx-auto p-6">
+
+    <h1 class="text-3xl font-bold text-nsp-blue mb-6">Student Applications</h1>
+
+    <table class="w-full table-auto border-collapse shadow-md">
+        <thead class="bg-nsp-blue text-white">
+            <tr>
+                <th class="p-3 text-left">Application ID</th>
+                <th class="p-3 text-left">Student Email</th>
+                <th class="p-3 text-left">Scheme</th>
+                <th class="p-3 text-left">Status</th>
+                <th class="p-3 text-left">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var app in Model)
+
+            {
+                <tr class="border-b bg-white hover:bg-gray-50">
+
+                    <td class="p-3">@app.ApplicationId</td>
+                    <td class="p-3">@app.UserId</td>
+                    <td class="p-3">@app.SchemeName</td>
+                    <td class="p-3">@app.MinistryStatus</td>
+
+                    <td class="p-3 flex gap-3">
+
+                        <!-- VIEW DETAILS -->
+                        <a asp-action="ViewStudent"
+                           asp-route-id="@app.ApplicationId"
+                           class="px-3 py-1 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+
+                            View
+                        </a>
+
+                        <!-- APPROVE -->
+                        <form asp-action="ProcessStudent" method="post">
+                            <input type="hidden" name="id" value="@app.ApplicationId" />
+                            <input type="hidden" name="decision" value="Approve" />
+                            <button class="px-3 py-1 bg-green-600 text-white rounded-lg hover:bg-green-700">
+
+                                Approve
+                            </button>
+                        </form>
+
+                        <!-- REJECT -->
+                        <form asp-action="ProcessStudent" method="post">
+                            <input type="hidden" name="id" value="@app.ApplicationId" />
+                            <input type="hidden" name="decision" value="Reject" />
+                            <button class="px-3 py-1 bg-red-600 text-white rounded-lg hover:bg-red-700">
+
+                                Reject
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+</div>
+

@@ -1,0 +1,185 @@
+﻿@model ScholarshipPortal.Models.InstituteRegistration
+@{
+    ViewData["Title"] = "Edit Institute Profile";
+}
+
+<style>
+    .edit-wrapper {
+        max-width: 1100px;
+        margin: 45px auto;
+        background: white;
+        padding: 45px 55px;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    }
+
+    .edit-title {
+        font-size: 32px;
+        text-align: center;
+        font-weight: 800;
+        margin-bottom: 40px;
+        color: #1e57c8;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 40px;
+    }
+
+    .form-label {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .form-control {
+        font-size: 17px;
+        height: 45px;
+        border-radius: 6px;
+    }
+
+    textarea.form-control {
+        height: 85px;
+        resize: none;
+    }
+
+    .btn-area {
+        margin-top: 38px;
+        text-align: center;
+    }
+
+    .btn-edit {
+        padding: 11px 34px;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        border-radius: 7px;
+        border: none;
+        margin: 0 6px;
+    }
+
+    .btn-save {
+        background: #28a745;
+    }
+
+    .btn-cancel {
+        background: #007bff;
+    }
+</style>
+
+
+<div class="edit-wrapper">
+
+    <div class="edit-title">Edit Institute Profile</div>
+
+    <form asp-action="EditProfile" method="post">
+        <input type="hidden" asp-for="InstituteId" />
+
+        <div class="form-grid">
+
+            <div>
+                <label class="form-label">Institute Name</label>
+                <input asp-for="InstituteName" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Institute Code</label>
+                <input asp-for="InstituteCode" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">DISE Code</label>
+                <input asp-for="DISECode" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Location</label>
+                <input asp-for="Location" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Institute Type</label>
+                <input asp-for="InstituteType" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Year Admission Started</label>
+                <input asp-for="YearAdmissionStarted" type="date" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">State</label>
+                <input asp-for="State" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">District</label>
+                <input asp-for="District" class="form-control" />
+            </div>
+
+            <div style="grid-column: span 2;">
+                <label class="form-label">Address</label>
+                <textarea asp-for="Address" class="form-control"></textarea>
+            </div>
+
+            <div>
+                <label class="form-label">Affiliated University State</label>
+                <input asp-for="AffiliatedUniversityState" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">University / Board Name</label>
+                <input asp-for="UniversityBoardName" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Establishment Certificate</label>
+                <input asp-for="EstablishmentCertificate" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Affiliation Certificate</label>
+                <input asp-for="AffiliationCertificate" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Principal Name</label>
+                <input asp-for="PrincipalName" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Mobile Number</label>
+                <input asp-for="MobileNumber" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Telephone</label>
+                <input asp-for="Telephone" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Email (Not Editable)</label>
+                <input asp-for="Email" class="form-control" readonly />
+            </div>
+
+            <div>
+                <label class="form-label">Security Question</label>
+                <input asp-for="SecurityQuestion" class="form-control" />
+            </div>
+
+            <div>
+                <label class="form-label">Security Answer</label>
+                <input asp-for="SecurityAnswer" class="form-control" />
+            </div>
+
+        </div>
+
+        <div class="btn-area">
+            <button type="submit" class="btn-edit btn-save">Save Changes</button>
+            <a href="/Institute/Dashboard" class="btn-edit btn-cancel">Cancel</a>
+        </div>
+
+    </form>
+</div>

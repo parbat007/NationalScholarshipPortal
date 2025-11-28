@@ -1,0 +1,104 @@
+﻿@model ScholarshipPortal.Models.InstituteRegistration
+@{
+    ViewData["Title"] = "Institute Profile";
+}
+
+<style>
+    .profile-container {
+        max-width: 900px;
+        margin: 60px auto;
+        background: white;
+        padding: 45px 55px;
+        border-radius: 20px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    }
+
+    .profile-title {
+        font-size: 32px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 35px;
+        color: #1e57c8;
+    }
+
+    .profile-table {
+        width: 100%;
+        font-size: 19px;
+    }
+
+        .profile-table tr {
+            height: 45px;
+        }
+
+        .profile-table th {
+            text-align: left;
+            font-weight: 700;
+            width: 40%;
+            padding-right: 12px;
+            color: #222;
+        }
+
+        .profile-table td {
+            color: #444;
+        }
+
+    .profile-buttons {
+        text-align: center;
+        margin-top: 45px;
+    }
+
+    .profile-btn {
+        padding: 14px 36px;
+        font-size: 19px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 0 14px;
+        display: inline-block;
+    }
+
+    .edit-btn {
+        background: #007bff;
+    }
+
+    .back-btn {
+        background: #1faa59;
+    }
+</style>
+
+
+<div class="profile-container">
+    <div class="profile-title">Institute Profile</div>
+
+    <table class="profile-table">
+        <tr><th>Institute Name</th><td>@Model.InstituteName</td></tr>
+        <tr><th>Institute Code</th><td>@Model.InstituteCode</td></tr>
+        <tr><th>DISE Code</th><td>@Model.DISECode</td></tr>
+        <tr><th>State</th><td>@Model.State</td></tr>
+        <tr><th>District</th><td>@Model.District</td></tr>
+        <tr><th>Location</th><td>@Model.Location</td></tr>
+        <tr><th>Institute Type</th><td>@Model.InstituteType</td></tr>
+        <tr><th>Year Admission Started</th><td>@Model.YearAdmissionStarted</td></tr>
+        <tr><th>Address</th><td>@Model.Address</td></tr>
+
+        <tr><th>Affiliated University State</th><td>@Model.AffiliatedUniversityState</td></tr>
+        <tr><th>University / Board Name</th><td>@Model.UniversityBoardName</td></tr>
+        <tr><th>Establishment Certificate</th><td>@Model.EstablishmentCertificate</td></tr>
+        <tr><th>Affiliation Certificate</th><td>@Model.AffiliationCertificate</td></tr>
+
+        <tr><th>Principal Name</th><td>@Model.PrincipalName</td></tr>
+        <tr><th>Mobile Number</th><td>@Model.MobileNumber</td></tr>
+        <tr><th>Telephone</th><td>@Model.Telephone</td></tr>
+
+        <tr><th>Email</th><td>@Model.Email</td></tr>
+
+        <tr><th>Security Question</th><td>@Model.SecurityQuestion</td></tr>
+        <tr><th>Security Answer</th><td>@Model.SecurityAnswer</td></tr>
+    </table>
+
+    <div class="profile-buttons">
+        <a href="/Institute/EditProfile" class="profile-btn edit-btn">Edit Profile</a>
+        <a href="/Institute/Dashboard" class="profile-btn back-btn">Back to Dashboard</a>
+    </div>
+</div>

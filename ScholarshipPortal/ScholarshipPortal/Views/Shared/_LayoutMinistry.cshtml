@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            <!-- LOGO -->
+            <div class="flex items-center gap-3">
+                <img src="~/images/nsp-logo.jpg" class="w-10 h-10 rounded-lg" />
+                <div>
+                    <h1 class="font-bold text-lg">Ministry Portal</h1>
+                    <p class="text-xs text-gray-500 -mt-1">Government of India</p>
+                </div>
+            </div>
+
+            <!-- NAV LINKS -->
+            <div class="flex items-center gap-8 text-gray-700 font-medium">
+                <a asp-controller="Ministry" asp-action="Dashboard" class="hover:text-blue-600">Dashboard</a>
+                <a asp-controller="Ministry" asp-action="StudentApplications" class="hover:text-blue-600">Students</a>
+                <a asp-controller="Ministry" asp-action="InstituteApplications" class="hover:text-blue-600">Institutes</a>
+
+                <!-- PROFILE DROPDOWN -->
+                <div class="relative group">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow group-hover:bg-blue-700">
+
+                        Profile ▾
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div class="absolute right-0 mt-2 bg-white text-gray-700 shadow-lg rounded-lg w-40 hidden group-hover:block">
+                        <a asp-controller="Ministry" asp-action="Dashboard"
+                           class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
+
+                        <a asp-controller="Ministry" asp-action="Logout"
+                           class="block px-4 py-2 hover:bg-gray-100 text-red-600">
+
+                            Logout
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div>
+
+        @RenderBody()
+    </div>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
+

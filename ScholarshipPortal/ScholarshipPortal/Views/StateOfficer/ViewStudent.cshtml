@@ -1,0 +1,295 @@
+﻿@model ScholarshipPortal.Models.ScholarshipApplicationViewModel
+@{
+    ViewData["Title"] = "Process Student Application";
+}
+
+<div class="min-h-screen bg-gray-100 py-10">
+    <div class="max-w-6xl mx-auto">
+
+        <!-- HEADER -->
+        <div class="bg-white shadow rounded-xl p-6 mb-8 border-l-4 border-blue-600 flex justify-between items-center">
+            <div>
+                <h2 class="text-2xl font-bold text-blue-700">
+                    Student Application #@Model.ApplicationId
+                </h2>
+                <p class="text-gray-600 text-sm">
+                    Review student details & all uploaded documents
+                </p>
+            </div>
+
+            <a asp-action="Dashboard" class="text-blue-700 font-semibold hover:underline">← Back</a>
+        </div>
+
+
+        <!-- BASIC DETAILS -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Basic Details</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div>
+                    <p class="text-gray-500 text-sm">Email</p>
+                    <p class="font-medium text-gray-900">@Model.UserId</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Aadhaar Number</p>
+                    <p class="font-medium text-gray-900">@Model.AadhaarNumber</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Religion</p>
+                    <p class="font-medium text-gray-900">@Model.Religion</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Community / Category</p>
+                    <p class="font-medium text-gray-900">@Model.CommunityCategory</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Father's Name</p>
+                    <p class="font-medium text-gray-900">@Model.FatherName</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Mother's Name</p>
+                    <p class="font-medium text-gray-900">@Model.MotherName</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Annual Family Income</p>
+                    <p class="font-medium text-gray-900">₹ @Model.FamilyAnnualIncome</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CONTACT DETAILS -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Contact & Address</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div>
+                    <p class="text-gray-500 text-sm">State</p>
+                    <p class="font-medium text-gray-900">@Model.ContactState</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">District</p>
+                    <p class="font-medium text-gray-900">@Model.ContactDistrict</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Block / Taluk</p>
+                    <p class="font-medium text-gray-900">@Model.BlockTaluk</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">House No.</p>
+                    <p class="font-medium text-gray-900">@Model.HouseNumber</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Street</p>
+                    <p class="font-medium text-gray-900">@Model.StreetNumber</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Pincode</p>
+                    <p class="font-medium text-gray-900">@Model.Pincode</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ACADEMIC DETAILS -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Academic Information</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div>
+                    <p class="text-gray-500 text-sm">Institute Name</p>
+                    <p class="font-medium text-gray-900">@Model.InstituteName</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Present Course</p>
+                    <p class="font-medium text-gray-900">@Model.PresentClassCourse</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Course Year</p>
+                    <p class="font-medium text-gray-900">@Model.PresentClassCourseYear</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Mode of Study</p>
+                    <p class="font-medium text-gray-900">@Model.ModeOfStudy</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">University / Board</p>
+                    <p class="font-medium text-gray-900">@Model.UniversityBoardName</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MARKS & EDUCATIONAL HISTORY -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Educational History</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div>
+                    <p class="text-gray-500 text-sm">10th Passing Year</p>
+                    <p class="font-medium text-gray-900">@Model.Class10PassingYear</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">10th Percentage</p>
+                    <p class="font-medium text-gray-900">@Model.Class10Percentage</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">12th Passing Year</p>
+                    <p class="font-medium text-gray-900">@Model.Class12PassingYear</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">12th Percentage</p>
+                    <p class="font-medium text-gray-900">@Model.Class12Percentage</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Previous Course</p>
+                    <p class="font-medium text-gray-900">@Model.PreviousClassCourse</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Previous Percentage</p>
+                    <p class="font-medium text-gray-900">@Model.PreviousClassPercentage</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FEE DETAILS -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Fee Details</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                    <p class="text-gray-500 text-sm">Admission Fee</p>
+                    <p class="font-medium text-gray-900">₹ @Model.AdmissionFee</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Tuition Fee</p>
+                    <p class="font-medium text-gray-900">₹ @Model.TuitionFee</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Other Fee</p>
+                    <p class="font-medium text-gray-900">₹ @Model.OtherFee</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- DISABILITY -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Disability Information</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                <div>
+                    <p class="text-gray-500 text-sm">Is Disabled?</p>
+                    <p class="font-medium text-gray-900">@Model.IsDisabled</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Disability Type</p>
+                    <p class="font-medium text-gray-900">@Model.TypeOfDisability</p>
+                </div>
+
+                <div>
+                    <p class="text-gray-500 text-sm">Percentage</p>
+                    <p class="font-medium text-gray-900">@Model.DisabilityPercentage</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- DOCUMENTS -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Uploaded Documents</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-blue-700">
+
+                @foreach (var doc in new List<(string Label, string Path)>
+                                {
+                                ("Domicile Certificate", Model.DomicileCertificatePath),
+                                ("Student Photo", Model.StudentPhotographPath),
+                                ("Institute ID Card", Model.InstituteIdCardPath),
+                                ("Caste/Income Certificate", Model.CasteIncomeCertificatePath),
+                                ("Previous Marksheet", Model.PreviousMarksheetPath),
+                                ("Fee Receipt", Model.FeeReceiptPath),
+                                ("Bank Passbook", Model.BankPassbookPath),
+                                ("Aadhaar Card", Model.AadhaarCardPath),
+                                ("10th Marksheet", Model.Class10MarksheetPath),
+                                ("12th Marksheet", Model.Class12MarksheetPath),
+                                })
+                {
+                    <div>
+                        <p class="font-medium text-gray-800">@doc.Label</p>
+
+                        @if (!string.IsNullOrEmpty(doc.Path))
+                        {
+                            <a href="@Url.Content(doc.Path)"
+                               target="_blank"
+                               class="text-blue-600 hover:underline">
+                                View Document
+                            </a>
+                        }
+                        else
+                        {
+                            <p class="text-gray-500">Not Uploaded</p>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+
+
+@if (Model.StateStatus == "Pending")
+{
+            <!-- Only show processing form if pending -->
+            <div class="bg-white rounded-xl shadow p-6 mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Decision</h3>
+
+                <form asp-action="ProcessStudent" method="post">
+                    <input type="hidden" name="id" value="@Model.ApplicationId" />
+
+                    <label class="font-medium text-gray-700">Remarks (optional)</label>
+                    <textarea name="remarks" rows="3"
+                          class="w-full border rounded-lg p-3 mb-4"></textarea>
+
+                    <div class="flex gap-4">
+                        <button name="decision" value="Approve"
+                                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold">
+                            Forward to Ministry
+                        </button>
+
+                        <button name="decision" value="Reject"
+                                class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold">
+                            Reject
+                        </button>
+                    </div>
+                </form>
+            </div>
+}
+

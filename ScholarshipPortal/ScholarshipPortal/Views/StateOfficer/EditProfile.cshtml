@@ -1,0 +1,71 @@
+﻿@model ScholarshipPortal.Models.StateOfficer
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+
+<div class="max-w-4xl mx-auto mt-10 bg-white shadow-xl rounded-xl border border-gray-200 overflow-hidden">
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-orange-500 to-yellow-500 p-6 text-white flex items-center gap-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Aadhaar_Logo.svg"
+             class="w-16 bg-white p-2 rounded-lg" />
+        <div>
+            <h1 class="text-2xl font-bold">Edit Profile</h1>
+            <p class="text-sm opacity-80">State Officer Identity Update</p>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <form asp-action="EditProfile" method="post" class="p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div>
+            <label class="text-sm text-gray-600">Full Name</label>
+            <input asp-for="FullName"
+                   class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-blue-300" />
+            <span asp-validation-for="FullName" class="text-red-600 text-sm"></span>
+        </div>
+
+        <div>
+            <label class="text-sm text-gray-600">Email</label>
+            <input asp-for="Email"
+                   class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-blue-300" />
+            <span asp-validation-for="Email" class="text-red-600 text-sm"></span>
+        </div>
+
+        <div>
+            <label class="text-sm text-gray-600">State Name</label>
+            <input asp-for="State"
+                   class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-blue-300" />
+            <span asp-validation-for="State" class="text-red-600 text-sm"></span>
+        </div>
+
+        <div>
+            <label class="text-sm text-gray-600">Password</label>
+            <input asp-for="Password" type="password"
+                   class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-blue-300" />
+            <span asp-validation-for="Password" class="text-red-600 text-sm"></span>
+        </div>
+
+        <div class="col-span-full flex justify-end gap-4 mt-4">
+            <a asp-action="ViewProfile"
+               class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">
+                Cancel
+            </a>
+
+            <button type="submit"
+                    class="px-6 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 shadow">
+                Save Changes
+            </button>
+        </div>
+    </form>
+
+    <div class="bg-gray-50 px-6 py-4 text-center text-sm text-gray-600 border-t">
+        © State Government | National Scholarship Portal
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

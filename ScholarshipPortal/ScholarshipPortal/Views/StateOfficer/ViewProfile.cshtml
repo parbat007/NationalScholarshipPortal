@@ -1,0 +1,72 @@
+﻿@model ScholarshipPortal.Models.StateOfficer
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<div class="max-w-4xl mx-auto mt-10 bg-white shadow-xl rounded-xl border border-gray-200 overflow-hidden">
+
+    <!-- Aadhaar-like Header -->
+    <!-- Aadhaar-like Header -->
+    <div class="bg-gradient-to-r from-red-600 to-orange-500 p-6 text-white flex items-center gap-4">
+
+        <img src="~/images/nsp-logo.jpg"
+             class="w-16 h-16 bg-white p-2 rounded-lg shadow-md object-contain" />
+
+        <div>
+            <h1 class="text-2xl font-bold">State Officer Identity</h1>
+            <p class="text-sm opacity-80">Government of India</p>
+        </div>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Left Photo Section -->
+        <div class="flex flex-col items-center border-r pr-6">
+
+            <!-- DEFAULT PROFILE IMAGE ADDED HERE -->
+            <img src="~/images/default-profile.png"
+                 class="w-32 h-32 object-cover rounded-full border-4 border-gray-300 shadow mb-4"
+                 alt="Profile" />
+
+            <p class="text-lg font-bold text-gray-800">@Model.FullName</p>
+            <p class="text-sm text-gray-500 mt-1">@Model.State</p>
+
+            <a asp-action="EditProfile"
+               class="mt-6 px-5 py-2 bg-blue-700 text-white rounded-lg shadow hover:bg-blue-800">
+                Edit Profile
+            </a>
+        </div>
+
+
+        <!-- Right Details Section -->
+        <div class="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <div>
+                <p class="text-gray-500 text-sm">Full Name</p>
+                <p class="text-gray-900 font-semibold">@Model.FullName</p>
+            </div>
+
+            <div>
+                <p class="text-gray-500 text-sm">Email Address</p>
+                <p class="text-gray-900 font-semibold">@Model.Email</p>
+            </div>
+
+            <div>
+                <p class="text-gray-500 text-sm">State Name</p>
+                <p class="text-gray-900 font-semibold">@Model.State</p>
+            </div>
+
+            <div>
+                <p class="text-gray-500 text-sm">Account ID</p>
+                <p class="text-gray-900 font-semibold">SO-@Model.Id</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Like Aadhaar -->
+    <div class="bg-gray-50 px-6 py-4 text-center text-sm text-gray-600 border-t">
+        © State Government | National Scholarship Portal
+    </div>
+
+</div>

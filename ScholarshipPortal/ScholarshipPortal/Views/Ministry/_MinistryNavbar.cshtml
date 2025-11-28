@@ -1,0 +1,29 @@
+﻿<nav class="bg-white shadow py-4 px-8 flex justify-between items-center">
+
+    <div class="flex items-center gap-3">
+        <img src="~/images/nsp-logo.jpg" class="w-10 h-10" />
+        <div class="text-xl font-bold">Ministry Portal</div>
+    </div>
+
+    <div class="flex items-center gap-8">
+
+        <a asp-controller="Ministry" asp-action="Dashboard" class="hover:text-blue-600 font-medium">Dashboard</a>
+        <a asp-controller="Ministry" asp-action="StudentApplications" class="hover:text-blue-600 font-medium">Students</a>
+        <a asp-controller="Ministry" asp-action="InstituteApplications" class="hover:text-blue-600 font-medium">Institutes</a>
+
+        <!-- Profile Dropdown -->
+        <div class="relative group">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg">
+
+                Profile ▾
+            </button>
+
+            <div class="absolute right-0 hidden group-hover:block bg-white shadow rounded-lg mt-2 w-40">
+                <a asp-action="ViewProfile" class="block px-4 py-2 hover:bg-gray-100">My Profile</a>
+                <a asp-action="Logout" class="block px-4 py-2 hover:bg-gray-100">Logout</a>
+            </div>
+        </div>
+    </div>
+
+</nav>
+

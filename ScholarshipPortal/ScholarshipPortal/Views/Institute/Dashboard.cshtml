@@ -1,0 +1,184 @@
+﻿@{
+    ViewData["Title"] = "Institute Dashboard";
+}
+
+<!-- INLINE CSS FOR COMPLETE STYLING -->
+<style>
+    .dashboard-container {
+        display: flex;
+        min-height: calc(100vh - 80px);
+        background: #f5f8ff;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 265px;
+        background: #1e57c8;
+        color: white;
+        padding: 35px 22px;
+    }
+
+    .sidebar-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .sidebar-menu li {
+        list-style: none;
+        margin: 18px 0;
+    }
+
+    .sidebar-menu a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .sidebar-menu a.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .sidebar-menu a:hover {
+            padding-left: 6px;
+            opacity: 0.85;
+        }
+
+    .main-content {
+        flex: 1;
+        padding: 45px;
+    }
+
+    .welcome-box {
+        background: white;
+        border-radius: 14px;
+        padding: 34px;
+        margin-bottom: 38px;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.08);
+    }
+
+        .welcome-box h2 {
+            color: #1faa59;
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+    .stats-section {
+        display: flex;
+        gap: 28px;
+        margin-bottom: 45px;
+    }
+
+    .stats-card {
+        flex: 1;
+        background: white;
+        border-radius: 13px;
+        padding: 28px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.12);
+        transition: transform .25s ease;
+    }
+
+        .stats-card:hover {
+            transform: scale(1.04);
+        }
+
+        .stats-card h4 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .stats-card h2 {
+            font-size: 44px;
+            font-weight: 900;
+            color: #1e57c8;
+        }
+
+    /* Buttons */
+    .action-buttons {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .btn-custom {
+        padding: 14px 32px;
+        border-radius: 9px;
+        margin: 0 10px;
+        font-size: 19px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        transition: 0.25s;
+    }
+
+        .btn-custom:hover {
+            opacity: .9;
+            transform: translateY(-2px);
+        }
+
+    .btn-view {
+        background: #007bff;
+    }
+
+    .btn-register {
+        background: #1faa59;
+    }
+
+    .btn-logout {
+        background: #d9534f;
+    }
+</style>
+
+<div class="dashboard-container">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+        <h3 class="sidebar-title">Navigation</h3>
+        <ul class="sidebar-menu">
+            <li><a href="/Institute/Dashboard" class="active">Dashboard</a></li>
+            <li><a href="/Institute/ViewProfile">View Profile</a></li>
+            <li><a href="/Institute/EditProfile">Edit Profile</a></li>
+            <li><a href="/Institute/Register">New Registration</a></li>
+            <li><a href="/Institute/Logout" style="color:#ffcccc; font-weight:bold;">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <!-- GREETING -->
+        <div class="welcome-box">
+            <h2>Welcome!</h2>
+            <p style="color:#555;">This is your official Institute Dashboard.</p>
+        </div>
+
+        <!-- STATISTICS SECTION -->
+        <div class="stats-section">
+            <div class="stats-card">
+                <h4>Total Students</h4>
+                <h2>125</h2>
+            </div>
+            <div class="stats-card">
+                <h4>Pending Applications</h4>
+                <h2>42</h2>
+            </div>
+            <div class="stats-card">
+                <h4>Approved Applications</h4>
+                <h2>83</h2>
+            </div>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div class="action-buttons">
+            <a href="/Institute/ViewProfile" class="btn-custom btn-view">View Profile</a>
+            <a href="/Institute/Register" class="btn-custom btn-register">Register New Institute</a>
+            <a href="/Institute/Logout" class="btn-custom btn-logout">Logout</a>
+        </div>
+
+    </div>
+</div>

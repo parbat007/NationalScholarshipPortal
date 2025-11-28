@@ -1,0 +1,283 @@
+﻿@model ScholarshipPortal.Models.StateDashboardViewModel
+@{
+    ViewData["Title"] = "State Officer Dashboard";
+}
+
+<div class="min-h-screen bg-gray-100 py-10">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- HEADER -->
+        <div class="bg-white shadow rounded-xl p-6 border-l-4 border-blue-600 flex items-center justify-between mb-10">
+            <div class="flex items-center gap-3">
+                <img src="~/images/nsp-logo.jpg" class="w-12" />
+                <div>
+                    <h1 class="text-2xl font-bold text-blue-700">State Officer Dashboard</h1>
+                    <p class="text-gray-600 text-sm">Welcome, @Model.OfficerName 👋</p>
+                </div>
+            </div>
+
+
+            <!-- Profile Dropdown -->
+            <div x-data="{ open: false }" class="relative">
+                <button x-on:click="open = !open"
+                        class="bg-blue-700 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">
+                    Profile ▾
+                </button>
+
+                <div x-show="open" x-on:click.away="open = false"
+                     class="absolute right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg w-48">
+
+                    <a asp-action="ViewProfile"
+                       class="block px-4 py-2 hover:bg-gray-100 text-gray-700">
+                        View Profile
+                    </a>
+
+                    <a asp-action="EditProfile"
+                       class="block px-4 py-2 hover:bg-gray-100 text-gray-700">
+                        Edit Profile
+                    </a>
+
+                    <a asp-action="Logout"
+                       class="block px-4 py-2 hover:bg-gray-100 text-red-600 font-medium">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ======================= STUDENT APPLICATIONS ======================= -->
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 mb-12">
+
+            <h2 class="text-xl font-semibold text-gray-800 mb-6">Student Applications</h2>
+
+            <!-- SEARCH BAR -->
+            <form method="get" class="flex items-center gap-4 mb-6">
+                <input type="text"
+                       name="studentSearch"
+                       value="@Model.StudentSearch"
+                       placeholder="Search by Aadhaar / Email / Institute"
+                       class="w-72 px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200" />
+
+                <button type="submit"
+                        class="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800">
+                    Search
+                </button>
+
+                <a href="/StateOfficer/Dashboard"
+                   class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">
+                    Reset
+                </a>
+            </form>
+
+            <!-- STUDENT TABLE -->
+            <div class="overflow-x-auto border rounded-lg">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-blue-50 text-gray-700 border-b">
+                        <tr>
+                            <th class="p-3 text-left">App ID</th>
+                            <th class="p-3 text-left">Email</th>
+                            <th class="p-3 text-left">Aadhaar</th>
+                            <th class="p-3 text-left">Institute</th>
+                            <th class="p-3 text-left">Status</th>
+                            <th class="p-3 text-left">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @if (Model.StudentApplications.Any())
+                        {
+                            foreach (var s in Model.StudentApplications)
+                            {
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="p-3">@s.ApplicationId</td>
+                                    <td class="p-3">@s.UserId</td>
+                                    <td class="p-3">@s.AadhaarNumber</td>
+                                    <td class="p-3">@s.InstituteName</td>
+
+                                    <td class="p-3 font-semibold
+                                                @(s.StateStatus == "Rejected" ? "text-red-600" :
+                                                                                 s.StateStatus == "ForwardedToMinistry" ? "text-green-700" :
+                                                                                 "text-blue-700") ">
+                                @s.StateStatus
+                            </td>
+
+                                    <!-- ACTION BUTTONS -->
+                                    <td class="p-3 flex items-center gap-3">
+
+                                @if (s.StateStatus == "Pending")
+                                        {
+                                            <!-- PROCESS BUTTON (Enabled) -->
+                                            <a asp-action="ViewStudent"
+                                               asp-route-id="@s.ApplicationId"
+                                               class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white rounded-md text-sm shadow">
+                                                Process
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <!-- STATUS BADGE -->
+                                            <span class="px-2 py-1 text-xs font-semibold rounded-md
+                                 @(s.StateStatus == "Rejected" ? "bg-red-100 text-red-700" : "bg-blue-100 text-blue-800")">
+                                                @s.StateStatus
+                                            </span>
+
+                                            <!-- VIEW ONLY BUTTON -->
+                                            <a asp-action="ViewStudent"
+                                               asp-route-id="@s.ApplicationId"
+                                               class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm shadow">
+                                                View
+                                            </a>
+                                        }
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="p-4 text-center text-gray-500">
+                                    No applications found.
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PAGINATION -->
+            @if (Model.StudentTotalPages > 1)
+            {
+                <div class="flex justify-center gap-2 mt-4">
+                    @for (int i = 1; i <= Model.StudentTotalPages; i++)
+                    {
+                        <a asp-action="Dashboard"
+                           asp-route-studentPage="@i"
+                           asp-route-studentSearch="@Model.StudentSearch"
+                           class="px-3 py-1 border rounded
+                                          @(i == Model.StudentPage ? "bg-blue-700 text-white" : "bg-white text-gray-700")">
+                            @i
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+
+
+
+
+        <!-- ======================= INSTITUTE REGISTRATIONS ======================= -->
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200">
+
+            <h2 class="text-xl font-semibold text-gray-800 mb-6">Institute Registrations</h2>
+
+            <!-- SEARCH BAR -->
+            <form method="get" class="flex items-center gap-4 mb-6">
+                <input type="text"
+                       name="instituteSearch"
+                       value="@Model.InstituteSearch"
+                       placeholder="Search by Institute Name / Code"
+                       class="w-72 px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200" />
+
+                <button type="submit"
+                        class="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800">
+                    Search
+                </button>
+
+                <a href="/StateOfficer/Dashboard"
+                   class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">
+                    Reset
+                </a>
+            </form>
+
+            <!-- INSTITUTE TABLE -->
+            <div class="overflow-x-auto border rounded-lg">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-blue-50 text-gray-700 border-b">
+                        <tr>
+                            <th class="p-3 text-left">Institute ID</th>
+                            <th class="p-3 text-left">Name</th>
+                            <th class="p-3 text-left">Code</th>
+                            <th class="p-3 text-left">Status</th>
+                            <th class="p-3 text-left">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @if (Model.Institutes.Any())
+                        {
+                            foreach (var i in Model.Institutes)
+                            {
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="p-3">@i.InstituteId</td>
+                                    <td class="p-3">@i.InstituteName</td>
+                                    <td class="p-3">@i.InstituteCode</td>
+                                    <td class="p-3 text-blue-700 font-medium">@i.StateStatus</td>
+
+                                    <td class="p-3 flex items-center gap-3">
+
+                                        @if (i.StateStatus == "Pending")
+                                        {
+                                            <!-- PROCESS BUTTON -->
+                                            <a asp-action="ViewInstitute"
+                                               asp-route-id="@i.InstituteId"
+                                               class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white rounded-md text-sm shadow">
+                                                Process
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <!-- STATUS BADGE -->
+                                            <span class="px-2 py-1 text-xs font-semibold rounded-md
+                                 @(i.StateStatus == "Rejected" ? "bg-red-100 text-red-700" : "bg-blue-100 text-blue-800")">
+                                                @i.StateStatus
+                                            </span>
+
+                                            <!-- VIEW BUTTON -->
+                                            <a asp-action="ViewInstitute"
+                                               asp-route-id="@i.InstituteId"
+                                               class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm shadow">
+                                                View
+                                            </a>
+                                        }
+
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="5" class="p-4 text-center text-gray-500">
+                                    No institute registrations found.
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PAGINATION -->
+            @if (Model.InstituteTotalPages > 1)
+            {
+                <div class="flex justify-center gap-2 mt-4">
+                    @for (int i = 1; i <= Model.InstituteTotalPages; i++)
+                    {
+                        <a asp-action="Dashboard"
+                           asp-route-institutePage="@i"
+                           asp-route-instituteSearch="@Model.InstituteSearch"
+                           class="px-3 py-1 border rounded
+                                          @(i == Model.InstitutePage ? "bg-blue-700 text-white" : "bg-white text-gray-700")">
+                            @i
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js" defer></script>
