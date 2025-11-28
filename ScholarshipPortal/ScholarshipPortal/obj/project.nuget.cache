@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K2bWBxfDfBU=",
+  "dgSpecHash": "xOeA70SCawA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj",
+  "projectFilePath": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NationalScholarshipPortal\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DU997HF\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\DU997HF\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj": {}
+    "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NationalScholarshipPortal\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj": {
+    "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NationalScholarshipPortal\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj",
+        "projectUniqueName": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NationalScholarshipPortal\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj",
         "projectName": "ScholarshipPortal",
-        "projectPath": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj",
+        "projectPath": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NationalScholarshipPortal\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal.csproj",
         "packagesPath": "C:\\Users\\DU997HF\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NNSp - Copy\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\obj\\",
+        "outputPath": "C:\\Users\\DU997HF\\OneDrive - EY\\Desktop\\NationalScholarshipPortal\\NationalScholarshipPortal\\ScholarshipPortal\\ScholarshipPortal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
